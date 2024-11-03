@@ -1,12 +1,18 @@
 # Assignment 5: Analyzing repeated measured experiments
+
+### Beskrivelser av mapper:
+1. R: R-scripts.
+2. data: Aktuelle datafiler, f.eks: .xlsx filer som inneholder datasett.
+3. resources: .bib-filer, referansestiler (csl-filer).
+4. figures: Figurer, grafer eller bilder.
+
+## Oppgaveteksten
 I denne oppgaven skal eg analysere og rapportere om en studie som undersøker
 effekten av volum i styrketrening på lean mass og muskelstyrke. Dataene som blir
 brukt er hentet fra 'strengthvolume' og 'dxadata' datasettene, som er en del av
 den større datapakken 'exscidata'.
 
-Under følger ooppgaveteksten:
-
-## Organizing the report
+### Organizing the report
 Your report should consist of the sections Introduction, Methods, Results and 
 Discussion. Each part of the report should be written as a reproducible document
 and a link or reference to the repository containing the source document(s) 
@@ -125,6 +131,6 @@ dxadata %>%
   select(participant, time, sex, include, sets, leg, lean.mass) %>%
 ```
 
-## Referanser
+### Referanser
 
 Hammarström, D., Øfsteng, S., Koll, L., Hanestadhaugen, M., Hollan, I., Apró, W., Whist, J. E., Blomstrand, E., Rønnestad, B. R., & Ellefsen, S. (2020). Benefits of higher resistance‐training volume are related to ribosome biogenesis. The Journal of Physiology, 598(3), 543–565. https://doi.org/10.1113/JP278455
