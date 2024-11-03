@@ -1,0 +1,20 @@
+---
+title: "Assignment 5"
+format: html
+format: 
+  html:
+    number-sections: true
+    toc: true
+    code-fold: true
+execute: 
+  warning: false
+crossref:
+  fig-title: "Figur"
+  tbl-title: "Tabell"
+bibliography: resources/referanser.bib
+csl: resources/apa.csl
+---
+
+Mulig hypotese:
+
+-   Vil størst endring i lean body mass også tilsvare størst endring i styrke?
