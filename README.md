@@ -9,8 +9,8 @@
 ## Oppgaveteksten
 I denne oppgaven skal eg analysere og rapportere om en studie som undersøker
 effekten av volum i styrketrening på lean mass og muskelstyrke. Dataene som blir
-brukt er hentet fra 'strengthvolume' og 'dxadata' datasettene, som er en del av
-den større datapakken 'exscidata'.
+brukt er hentet fra `strengthvolume` og `dxadata` datasettene, som er en del av
+den større datapakken `exscidata`.
 
 ### Organizing the report
 Your report should consist of the sections Introduction, Methods, Results and 
