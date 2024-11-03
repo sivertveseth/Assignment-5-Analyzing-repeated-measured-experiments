@@ -1,6 +1,6 @@
 ---
-title: "Assignment 5"
-format: html
+title: "Assignment 5: Analyzing repeated measured experiments"
+author: "Sivert Helland Veseth"
 format: 
   html:
     number-sections: true
@@ -18,3 +18,33 @@ csl: resources/apa.csl
 Mulig hypotese:
 
 -   Vil størst endring i lean body mass også tilsvare størst endring i styrke?
+
+# Introduksjon
+
+Avsnitt 1:
+
+- Introdusere leseren for kva som skal bli undersøkt. Sentrale punkter å få med er:
+  - Hensikten med trening generelt, og knytt det opp mot styrketrening - kva er dette? For inspirasjon se eksamensoppgåve     i styrkefaget.
+  - Forholdet mellom økt lean body mass og styrketrening (dose-respons forholdet)- tett knyttet til hverandre, samtidig      som det ses en diskrepans når man sammenligner dose-respons forholdet på lean body mass og muskelstyrke. 
+
+Avsnitt 2:
+
+- Benytt dette avsnittet til å forklare mer i detalj mekanismene bak økning i lean body mass og muskelstyrke. Sentrale definisjoner å få inn vil være
+  - Lean body mass
+  - Muskelstyrke, maksimal styrke
+  - Hva er det som er med å bestemme muskelstyrken vår (se Raastad for inspirasjon)
+  - Dose-respons forholdet
+  - Treningsvolum
+  - Kan være fint å få inn intensitet og grad av anstrengelse
+
+Avsnitt 3:
+
+- Mange som argumenterer for at tverrsnitsarealet av muskulatur er den viktigaste faktoren for vår maksimale styrke. Utfordrer derfor dette synet, og ønsker å se på om økning i muskelmasse kan være et godt mål på økning i muskelstyrke.
+  
+# Metode
+
+# Resulater
+
+# Diskusjon
+
+
