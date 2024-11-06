@@ -35,11 +35,18 @@ baseline_tbl <- dxadata %>%
     Stature = sprintf("%.0f (%.0f)", mean(height, na.rm = TRUE), sd(height, na.rm = TRUE)),
     .groups = "drop"  # For å unngå advarsler om grupping
   ) %>% 
-  pivot_wider(names_from = include, values_from = c(N, Alder, Vekt, Stature))
+  # Konverter alle kolonnene til karakter for å unngå datatypeproblemer i pivot_longer
+  mutate(across(everything(), as.character)) %>%
+  pivot_longer(cols = c(N, Alder, Vekt, Stature), names_to = "Variable", values_to = "Value") %>% 
+  unite("sex_include", sex, include, sep = "_") %>% 
+  pivot_wider(names_from = sex_include, values_from = Value)
 
 # Tabell 
-kable(baseline_tbl) %>% 
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+kable(baseline_tbl, row.names = FALSE, col.names = c("", "Ekskludert", "Inkludert", "Ekskludert", "Inkludert")) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  add_header_above(c(" " = 1, "Kvinne" = 2, "Mann" = 2))
+
+
 
 # Lager en dataframe med nødvendig info
 
@@ -102,3 +109,9 @@ ggplot(data, aes(x = factor(Uke), y = Frekvens)) +
     y = "Treningsfrekvens"
   ) +
   theme_minimal()
+
+
+# Tabell 
+kable(baseline_tbl, row.names = FALSE, col.names = c("", "Ekskludert", "Inkludert", "Ekskludert", "Inkludert")) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
+  add_header_above(c(" " = 1, "Kvinne" = 2, "Mann" = 2))
