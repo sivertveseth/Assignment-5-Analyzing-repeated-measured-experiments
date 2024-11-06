@@ -59,6 +59,35 @@ div.csl-indent {
 <link href="Assignment5_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -75,8 +104,9 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#deltagere-og-studieoversikt" id="toc-deltagere-og-studieoversikt" class="nav-link" data-scroll-target="#deltagere-og-studieoversikt"><span class="header-section-number">2.1</span> Deltagere og studieoversikt</a></li>
   <li><a href="#styrketreningsprotokoll" id="toc-styrketreningsprotokoll" class="nav-link" data-scroll-target="#styrketreningsprotokoll"><span class="header-section-number">2.2</span> Styrketreningsprotokoll</a></li>
-  <li><a href="#målinger-av-muskelstyrke" id="toc-målinger-av-muskelstyrke" class="nav-link" data-scroll-target="#målinger-av-muskelstyrke"><span class="header-section-number">2.3</span> Målinger av muskelstyrke</a></li>
-  <li><a href="#muskelens-tverrsnittsareal-og-kroppssammensetning" id="toc-muskelens-tverrsnittsareal-og-kroppssammensetning" class="nav-link" data-scroll-target="#muskelens-tverrsnittsareal-og-kroppssammensetning"><span class="header-section-number">2.4</span> Muskelens tverrsnittsareal og kroppssammensetning</a></li>
+  <li><a href="#målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal" id="toc-målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal" class="nav-link" data-scroll-target="#målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal"><span class="header-section-number">2.3</span> Målinger av maksimal muskelstyrke og muskelens tverrsnittsareal</a></li>
+  <li><a href="#muskelens-tverrsnittsareal" id="toc-muskelens-tverrsnittsareal" class="nav-link" data-scroll-target="#muskelens-tverrsnittsareal"><span class="header-section-number">2.4</span> Muskelens tverrsnittsareal</a></li>
+  <li><a href="#data-analyse-og-statistikk" id="toc-data-analyse-og-statistikk" class="nav-link" data-scroll-target="#data-analyse-og-statistikk"><span class="header-section-number">2.5</span> Data analyse og statistikk</a></li>
   </ul></li>
   <li><a href="#resulater" id="toc-resulater" class="nav-link" data-scroll-target="#resulater"><span class="header-section-number">3</span> Resulater</a></li>
   <li><a href="#diskusjon" id="toc-diskusjon" class="nav-link" data-scroll-target="#diskusjon"><span class="header-section-number">4</span> Diskusjon</a></li>
@@ -114,7 +144,7 @@ div.csl-indent {
 <h1 data-number="1"><span class="header-section-number">1</span> Introduksjon</h1>
 <p>Avsnitt 1:</p>
 <p>Treningsadaptasjon er en av de mest grunnleggende søylene i treningsvitenskapen, som sier at kroppen vår kan tilpasse seg den belastningen den utsettes for, gitt at den får nok tid til å tilpasse seg den nye belastningen (<span class="citation" data-cites="bompa2019">Bompa &amp; Buzzichelli (<a href="#ref-bompa2019" role="doc-biblioref">2019</a>)</span>, s. 8). Spesielt skjelettmuskulaturen har vist seg å være et høgts tilpasningsdyktig vev som kan endre sin egen arkitektur som respons på en gitt stimuli (<span class="citation" data-cites="coffey2007">Coffey &amp; Hawley (<a href="#ref-coffey2007" role="doc-biblioref">2007</a>)</span>). Resultatene på disse tilpasningene er påvirket av volumet, intensiteten og frekvensen av treningen, i tillegg vil tilpasningene avhengig av den spesifikke belastningen kroppen og muskulaturen utsettes for, for eksempel treningsmetode (<span class="citation" data-cites="bompa2019">Bompa &amp; Buzzichelli (<a href="#ref-bompa2019" role="doc-biblioref">2019</a>)</span>, s.3; <span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.17;<span class="citation" data-cites="coffey2007">Coffey &amp; Hawley (<a href="#ref-coffey2007" role="doc-biblioref">2007</a>)</span>;<span class="citation" data-cites="izquierdo2004">Izquierdo et al. (<a href="#ref-izquierdo2004" role="doc-biblioref">2004</a>)</span>).</p>
-<p>Styrketrening har vist seg å være avgjørende, ikke bare for idrettsprestasjoner (<span class="citation" data-cites="washif2022">Washif &amp; Kok (<a href="#ref-washif2022" role="doc-biblioref">2022</a>)</span>), men også for folkehelse og redusert dødelighet (<span class="citation" data-cites="ruiz2008">Ruiz et al. (<a href="#ref-ruiz2008" role="doc-biblioref">2008</a>)</span>). Denne treningsformen omfatter aktiviteter som utvikler eller opprettholder vår evne til å generer maksimal kraft eller dreiemoment ved en spesifikk hastighet (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.17). Trening for maksimal muskelstyrke, der målet er å øke den høyeste kraften en muskel kan produsere (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.13), skiller seg fra trening med hensikt om muskelvekst (hypertrofi), hvor fokus ligger på å øke muskelens størrelse (<span class="citation" data-cites="schoenfeld2016">Schoenfeld et al. (<a href="#ref-schoenfeld2016" role="doc-biblioref">2016</a>)</span>). Flere studier har undersøkt hvilket treningsvolum som best stimulerer slike tilpasninger og har identifisert et dose-respons-forhold, hvor økt treningsvolum er assosiert med større muskelvekst (<span class="citation" data-cites="currier2023">Currier et al. (<a href="#ref-currier2023" role="doc-biblioref">2023</a>)</span>; <span class="citation" data-cites="schoenfeld2016">Schoenfeld et al. (<a href="#ref-schoenfeld2016" role="doc-biblioref">2016</a>)</span>). Et lignende forhold er også blitt observert for muskelstyrke (<span class="citation" data-cites="ralston2017">Ralston et al. (<a href="#ref-ralston2017" role="doc-biblioref">2017</a>)</span>), selv om det er også foreslått at et høgt treningsvolum kan bremse utviklingen av maksimal muskelstyrke (<span class="citation" data-cites="zhang2023">Zhang et al. (<a href="#ref-zhang2023" role="doc-biblioref">2023</a>)</span>). Muskelens tverrsnitt er en sentral faktor å ta med, da et større tverrsnitt vil gi et større potensiale for kraftutvikling (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.20). Dette understreker behovet for videre undersøkelser av hvordan treningsvolum påvirker både muskelhypertrofi og styrkeutvikling, samt i hvilken grad endringer i muskelmasse er sammenfallende med økninger i styrke.</p>
+<p>Styrketrening har vist seg å være avgjørende, ikke bare for idrettsprestasjoner (<span class="citation" data-cites="washif2022">Washif &amp; Kok (<a href="#ref-washif2022" role="doc-biblioref">2022</a>)</span>), men også for folkehelse og redusert dødelighet (<span class="citation" data-cites="ruiz2008">Ruiz et al. (<a href="#ref-ruiz2008" role="doc-biblioref">2008</a>)</span>). Denne treningsformen omfatter aktiviteter som utvikler eller opprettholder vår evne til å generer maksimal kraft eller dreiemoment ved en spesifikk hastighet (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.17). Trening for maksimal muskelstyrke, der målet er å øke den høyeste kraften en muskel kan produsere (målt som en repetisjon maksimum) (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.13), skiller seg fra trening med hensikt om muskelvekst (hypertrofi), hvor fokus ligger på å øke muskelens størrelse (<span class="citation" data-cites="schoenfeld2016">Schoenfeld et al. (<a href="#ref-schoenfeld2016" role="doc-biblioref">2016</a>)</span>). Flere studier har undersøkt hvilket treningsvolum som best stimulerer slike tilpasninger og har identifisert et dose-respons-forhold, hvor økt treningsvolum er assosiert med større muskelvekst (<span class="citation" data-cites="currier2023">Currier et al. (<a href="#ref-currier2023" role="doc-biblioref">2023</a>)</span>; <span class="citation" data-cites="schoenfeld2016">Schoenfeld et al. (<a href="#ref-schoenfeld2016" role="doc-biblioref">2016</a>)</span>). Et lignende forhold er også blitt observert for muskelstyrke (<span class="citation" data-cites="ralston2017">Ralston et al. (<a href="#ref-ralston2017" role="doc-biblioref">2017</a>)</span>), selv om det er også foreslått at et høgt treningsvolum kan bremse utviklingen av maksimal muskelstyrke (<span class="citation" data-cites="zhang2023">Zhang et al. (<a href="#ref-zhang2023" role="doc-biblioref">2023</a>)</span>). Muskelens tverrsnitt er en sentral faktor å ta med, da et større tverrsnitt vil gi et større potensiale for kraftutvikling (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.20). Dette understreker behovet for videre undersøkelser av hvordan treningsvolum påvirker både muskelhypertrofi og styrkeutvikling, samt i hvilken grad endringer i muskelmasse er sammenfallende med økninger i styrke.</p>
 <p>På bakgrunn av tidligere forskning og den noe usikre dose-respons-sammenhengen mellom optimal treningsvolum og muskeltilpasninger, er formålet med denne studien å undersøke hvordan ulike nivåer av treningsvolum påvirker både muskelvekst og muskelstyrke. Ettersom at skjelettmuskulaturen er svært tilpasningsdyktig på den stimulien utsettes for, ønsker studien også å undersøke om større endringer i muskelvekst følger sammen med tilsvarende endringer i muskelstyrke ved høyere treningsvolum. Ved å utforske denne sammenhengen håper man å kunne bidra med økt innsikt som kan være nyttig ved anbefalinger om optimalt treningsvolum.</p>
 <ul>
 <li>Introdusere leseren for kva som skal bli undersøkt. Sentrale punkter å få med er:
@@ -154,39 +184,57 @@ Tabell&nbsp;1: Deltakerkarakteristikker
 <div aria-describedby="tbl-antro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <table class="table table-striped table-hover table-condensed do-not-create-environment cell caption-top table-sm small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">sex</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">N_excl</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">N_incl</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Alder_excl</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Alder_incl</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Vekt_excl</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Vekt_incl</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Stature_excl</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Stature_incl</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Kvinne
+</div></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Mann
+</div></th>
+</tr>
+<tr class="odd">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ekskludert</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Inkludert</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ekskludert</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Inkludert</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">female</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: left;">22.9 (1.6)</td>
-<td style="text-align: left;">22.0 (1.3)</td>
-<td style="text-align: left;">64.6 (9.7)</td>
-<td style="text-align: left;">64.4 (10.4)</td>
-<td style="text-align: left;">166 (8)</td>
-<td style="text-align: left;">168 (7)</td>
+<td style="text-align: left;">N</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">16</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">male</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">16</td>
+<td style="text-align: left;">Alder</td>
+<td style="text-align: left;">22.9 (1.6)</td>
+<td style="text-align: left;">22.0 (1.3)</td>
 <td style="text-align: left;">24.3 (1.5)</td>
 <td style="text-align: left;">23.6 (4.1)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vekt</td>
+<td style="text-align: left;">64.6 (9.7)</td>
+<td style="text-align: left;">64.4 (10.4)</td>
 <td style="text-align: left;">88.2 (22.4)</td>
 <td style="text-align: left;">75.8 (10.7)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Stature</td>
+<td style="text-align: left;">166 (8)</td>
+<td style="text-align: left;">168 (7)</td>
 <td style="text-align: left;">189 (5)</td>
 <td style="text-align: left;">183 (6)</td>
 </tr>
@@ -214,15 +262,23 @@ Figur&nbsp;1
 </div>
 </div>
 </div>
+<p>De ulike søylene illustrer treningsfrekvens per uke med en treningsintensitet lik x repetisjon maksimum (RM). De intensitetne som er markert med (*), referer til at en av de øktene den uken ble utført med 90% av 1RM. Sirkelsymbolet viser til når det ble utført målinger av muskeltversnitt med hjelp av fullkropps DXA og MR av kneekstensjons muskelen. X markerer de ulike styrkemålingene: før intervensjonen (n = 34), under (n = 18) og etter (n = 34). Den maksimale styrken før intervensjonen ble satt som den høgeste verdien deltagerne oppnådde under to ulike testsekvenser før intervensjonen startet.</p>
 </section>
 <section id="styrketreningsprotokoll" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="styrketreningsprotokoll"><span class="header-section-number">2.2</span> Styrketreningsprotokoll</h2>
+<p>Det ble laget en standardisert oppvarming som deltakerne skulle gjennomføre før de begynte med styrketreningen. Oppvarmingen begynte med 5 minutter på ergometer sykkel, der de skulle holde 12-14 på gjennomgått grad av anstrengelse (RPE, se bilde under). Etter syklingen skulle de gjennomføre 10 repetisjoner av push-ups (tilpasset vanskelighetsgrad basert på vinkel), sit-ups, knebøy og rygghev, etterfulgt av et sett med 10 repetisjoner av hver styrkeøvelse med en motstand tilsvarende rundt 50% av deres repetisjons maksimum (1RM).</p>
+<p>Styrketreningen inneholdt en del for beina og en for overkroppen. For beina skulle det gjennomføres unilateral beinpress, knefleksjon og knestrekk, i den nevnte rekkefølgen. Avhengig av gruppen deltakerne ble tildelt til, ble hver øvelse enten utført med ett sett eller tre sett. Beinet som ble tildelt ett-setts protokollen gjennomførte arbeidet sitt mellom det andre og tredje settet til benet som skulle gjennomføre tre sett. Pausene mellom settene skulle vare mellom 90-180 sekunder. Etter beinøvelsene hadde blitt fullført, skulle deltakerne gjøre to sett av bilateral benkpress, nedtrekk og enten skulderpress eller sittende roinger som ble gjort i hver sin økt. Som man kan se fra <a href="#fig-trening" class="quarto-xref">Figure&nbsp;1</a>, så ble treningsintensiteten gradvis økt fra 10RM to første ukene hadde 10RM, til 8RM de påfølgende tre ukene og 7RM de siste syv ukene. Etter den niende treningsøkten hadde hver uke som inneholdt tre økter i uken, en økt med lavere motstand, men der man beholdt samme antall repetisjoner (motstanden tilsvarte 90% av økten før). Øktene med maksimal innsats skulle ikke gjentas før det var gått 48 timer, mens det trengte kun å gå 24 timer mellom ny økt og øktene med redusert motstand. For å fasiletere til restitusjon, ble det gitt en standardisert drikk med 0.15 g kg<span class="math inline">\(^{-1}\)</span> protein, 11.2g kg<span class="math inline">\(^{-1}\)</span> karbohydrater og 0.5 g kg<span class="math inline">\(^{-1}\)</span> fett, etter hver treningsøkt. For å sikre bærekraftighet av treningsprotokollen, ble det lagt opp til at noen av øktene kunne gjennomføres uten tilsyn. For å sikre progresjon og etterlevelse, ble deltakerne instruert til å føre deltaljerte loggbøker for de øktene som ble utført uten tilsyn, slik at forskerteamet kunne i samarbeid med deltakerne gå gjennom øktene. Av alle øktene, ble i gjennomsnitt 91% (SD = 10%, range 67-100%) av øktene gjennomført med tilsyn.</p>
 </section>
-<section id="målinger-av-muskelstyrke" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="målinger-av-muskelstyrke"><span class="header-section-number">2.3</span> Målinger av muskelstyrke</h2>
+<section id="målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal"><span class="header-section-number">2.3</span> Målinger av maksimal muskelstyrke og muskelens tverrsnittsareal</h2>
+<p>Deltakerne sin maksimale styrke ble satt som deres en repetisjon maksimum (1RM) i unilateral beinpress og knestrekk. Selve testen inneholdt en standardisert oppvarming med 10, 6 og 3 repetisjoner på henholdsvis 50,75 og 85% av deres antatte repetisjon maksimum. Etter dette, ble motstanden gradvis økt helt til deltagerne ikke mestret å løfte vekten gjennom hele bevegelsesbanen, for å finne deres 1RM. Hver deltaker fikk mellom fire og seks forsøk, der den høgeste vekten de mestret å løfte i hver øvelse, ble satt som 1RM. Ved baseline, ble 1RM målt to ganger med minst fire dager mellom hver måling, der den høyeste i hver test ble brukt i videre analyser. I tillegg til nye målinger etter endt intervensjon, gjennomførte en del av deltakerne (n = 18) styrkemålinger underveis i studien (i uke 2, 5 og 9). Det skulle ha gått minst 48 timer fra forrige treningsøkt før styrketest. De resterende som ikke utførte tester underveis, ble de ordinære treningsøktene prioritert ved sykdom eller tidsutfordringer som medførte at de gikk glipp av trening eller test.</p>
 </section>
-<section id="muskelens-tverrsnittsareal-og-kroppssammensetning" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="muskelens-tverrsnittsareal-og-kroppssammensetning"><span class="header-section-number">2.4</span> Muskelens tverrsnittsareal og kroppssammensetning</h2>
+<section id="muskelens-tverrsnittsareal" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="muskelens-tverrsnittsareal"><span class="header-section-number">2.4</span> Muskelens tverrsnittsareal</h2>
+<p>Eg ønsker å legge inn i denne koden data fra et annet datasett som heter strengthvolume. Dataen eg ønsker å hente er pre verdiene fra kolonne load, men at det blir splittet opp etter legpress og legext</p>
+</section>
+<section id="data-analyse-og-statistikk" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="data-analyse-og-statistikk"><span class="header-section-number">2.5</span> Data analyse og statistikk</h2>
 <p>Få med følgende deler:</p>
 <ul>
 <li><p>Participants and study overview: Describe the participants and give an overview of all tests/measurements. Participants should be described in the first table of the report (Table 1). The overview of the tests/measurements should be done without double presentation as details should be presented in subsequent sections.</p></li>
