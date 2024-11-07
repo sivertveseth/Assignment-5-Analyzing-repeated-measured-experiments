@@ -85,9 +85,10 @@ kable(baseline_tbl, row.names = FALSE, col.names = c("", "Ekskludert", "Inkluder
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE) %>%
   add_header_above(c(" " = 1, "Kvinne" = 2, "Mann" = 2))
 ```
+
 Verdiene er presentert som gjennomsnitt og standardavvik (SD).
 
-Deltakerne gjennomgikk en treningsintervensjon med 12 uker styrketrening for hele kroppen i perioden september til november. For å muliggjøre for differensiereng av treningsvolum for hver deltaker, ble beinøvelsene utført unilateralt. Hver deltaker fikk tilfeldig utdelt enten ett sett eller tre sett til enten høgre eller venstre bein. Deltagerne utførte dermed begge volumprotokollene. Det ble gjennomført måling av maksimal styrke ved baseline, under (uke 3,5 og 9) og rett etter intervensjonen, mens muskeltverrsnitt ble målt før og etter, se @fig-trening. 
+Deltakerne gjennomgikk en treningsintervensjon med 12 uker styrketrening for hele kroppen i perioden september til november. For å muliggjøre for differensiereng av treningsvolum for hver deltaker, ble beinøvelsene utført unilateralt. Hver deltaker fikk tilfeldig utdelt enten ett sett eller tre sett til enten høgre eller venstre bein. Deltagerne utførte dermed begge volumprotokollene. Det ble gjennomført måling av maksimal styrke ved baseline, under (uke 3,5 og 9) og rett etter intervensjonen, mens muskeltverrsnitt ble målt før og etter, se @fig-trening.
 
 ```{r}
 #| echo: false
@@ -96,34 +97,34 @@ Deltakerne gjennomgikk en treningsintervensjon med 12 uker styrketrening for hel
 
 # Dataframe som representerer treningsfrekvens og RM per uke
 data <- data.frame(
-  Uke = 1:12,
+  Uke = factor(1:12, levels = c(0, 1:12)),  # Spesifiserer nivåene, inkludert 0
   RM = c("10RM", "10RM", "8RM", "8RM*", "8RM", "7RM*", "7RM", "7RM", "7RM*", "7RM", "7RM", "7RM"),
   Frekvens = c(2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 2, 1)
 )
 
 # Ukene der styrkemålingene ble gjort (x-markeringene)
 måling_uker <- data.frame(
-  Uke = c(1, 3, 5, 9, 12),  # Uke 1 representerer baseline
+  Uke = factor(c(0, 1, 3, 5, 9, 12), levels = c(0, 1:12)),  # Inkluderer 0 foran 1
   Frekvens = 3.1,           # Plassering over søylene
   label = "x"               # Bruk "x" som markør
 )
 
-# Ukene der muskeltverrsnit ble gjort (sirkel-markeringene))
+# Ukene der muskeltverrsnit ble gjort (sirkel-markeringene)
 sirkel_uker <- data.frame(
-  Uke = c(1, 12),          # Uke 1 og uke 12
-  Frekvens = 3.1           # Plassering over søylene
+  Uke = factor(c(1, 12), levels = c(0, 1:12)),  # Sikrer at 0 er med på skalaen
+  Frekvens = 3.0           # Plassering over søylene
 )
 
-# Søylediagram som illustrere studiedesign
-ggplot(data, aes(x = factor(Uke), y = Frekvens)) +
+# Søylediagram som illustrerer studiedesign
+ggplot(data, aes(x = factor(Uke, levels = c(0, 1:12)), y = Frekvens)) +
   geom_bar(stat = "identity", fill = "grey", color = "black", width = 0.6) +  
   geom_text(aes(label = RM), vjust = 0.5, color = "black", size = 5, 
             angle = 90, position = position_stack(vjust = 0.5)) +  # Plasser RM-etiketter vertikalt midt i søylen
-  geom_text(data = måling_uker, aes(x = factor(Uke), y = Frekvens, label = label), 
-            color = "black", size = 6, vjust = -0.5, position = position_nudge(x = -0.1)) +  # Plasser "x" litt til venstre
-  geom_point(data = sirkel_uker, aes(x = factor(Uke), y = Frekvens), 
-             shape = 21, fill = "white", color = "black", size = 5, stroke = 1.5, 
-             position = position_nudge(x = 0.1)) +  # Plasser sirkler litt til høyre
+  geom_text(data = måling_uker, aes(x = Uke, y = Frekvens, label = label), 
+            color = "black", size = 6, vjust = -0.5) +  # Plasser "x" rett over søylen
+  geom_point(data = sirkel_uker, aes(x = Uke, y = Frekvens), 
+             shape = 21, fill = "white", color = "black", size = 5, stroke = 1.5) +  # Plasser sirkler rett over søylen
+  scale_x_discrete(limits = as.character(c(0, 1:12))) +  # Setter rekkefølgen på x-aksen
   scale_y_continuous(breaks = 1:3, limits = c(0, 3.5)) +  # Justerer y-aksen for å gi plass til markeringene
   labs(
     x = "Uke",
@@ -131,29 +132,124 @@ ggplot(data, aes(x = factor(Uke), y = Frekvens)) +
   ) +
   theme_minimal()
 ```
-De ulike søylene illustrer treningsfrekvens per uke med en treningsintensitet lik x repetisjon maksimum (RM). De intensitetne som er markert med (*), referer til at en av de øktene den uken ble utført med 90% av 1RM. Sirkelsymbolet viser til når det ble utført målinger av muskeltversnitt med hjelp av fullkropps DXA og MR av kneekstensjons muskelen. X markerer de ulike styrkemålingene: før intervensjonen (n = 34), under (n = 18) og etter (n = 34). Den maksimale styrken før intervensjonen ble satt som den høgeste verdien deltagerne oppnådde under to ulike testsekvenser før intervensjonen startet. 
+
+De ulike søylene illustrer treningsfrekvens per uke med en treningsintensitet lik x repetisjon maksimum (RM). De intensitetne som er markert med (\*), referer til at en av de øktene den uken ble utført med 90% av 1RM. Sirkelsymbolet viser til når det ble utført målinger av muskeltversnitt med hjelp av fullkropps DXA og MR av kneekstensjons muskelen. X markerer de ulike styrkemålingene: før intervensjonen (n = 34), under (n = 18) og etter (n = 34). Den maksimale styrken før intervensjonen ble satt som den høgeste verdien deltagerne oppnådde under to ulike testsekvenser før intervensjonen startet.
 
 ## Styrketreningsprotokoll
 
-Det ble laget en standardisert oppvarming som deltakerne skulle gjennomføre før de begynte med styrketreningen. Oppvarmingen begynte med 5 minutter på ergometer sykkel, der de skulle holde 12-14 på gjennomgått grad av anstrengelse (RPE, se bilde under). Etter syklingen skulle de gjennomføre 10 repetisjoner av push-ups (tilpasset vanskelighetsgrad basert på vinkel), sit-ups, knebøy og rygghev, etterfulgt av et sett med 10 repetisjoner av hver styrkeøvelse med en motstand tilsvarende rundt 50% av deres repetisjons maksimum (1RM). 
+Det ble laget en standardisert oppvarming som deltakerne skulle gjennomføre før de begynte med styrketreningen. Oppvarmingen begynte med 5 minutter på ergometer sykkel, der de skulle holde 12-14 på gjennomgått grad av anstrengelse (RPE, se bilde under). Etter syklingen skulle de gjennomføre 10 repetisjoner av push-ups (tilpasset vanskelighetsgrad basert på vinkel), sit-ups, knebøy og rygghev, etterfulgt av et sett med 10 repetisjoner av hver styrkeøvelse med en motstand tilsvarende rundt 50% av deres repetisjons maksimum (1RM).
 
-Styrketreningen inneholdt en del for beina og en for overkroppen. For beina skulle det gjennomføres unilateral beinpress, knefleksjon og knestrekk, i den nevnte rekkefølgen. Avhengig av gruppen deltakerne ble tildelt til, ble hver øvelse enten utført med ett sett eller tre sett. Beinet som ble tildelt ett-setts protokollen gjennomførte arbeidet sitt mellom det andre og tredje settet til benet som skulle gjennomføre tre sett. Pausene mellom settene skulle vare mellom 90-180 sekunder. Etter beinøvelsene hadde blitt fullført, skulle deltakerne gjøre to sett av bilateral benkpress, nedtrekk og enten skulderpress eller sittende roinger som ble gjort i hver sin økt. Som man kan se fra @fig-trening, så ble treningsintensiteten gradvis økt fra 10RM to første ukene hadde 10RM, til 8RM de påfølgende tre ukene og 7RM de siste syv ukene. Etter den niende treningsøkten hadde hver uke som inneholdt tre økter i uken, en økt med lavere motstand, men der man beholdt samme antall repetisjoner (motstanden tilsvarte 90% av økten før). Øktene med maksimal innsats skulle ikke gjentas før det var gått 48 timer, mens det trengte kun å gå 24 timer mellom ny økt og øktene med redusert motstand. For å fasiletere til restitusjon, ble det gitt en standardisert drikk med 0.15 g kg$^{-1}$ protein, 11.2g kg$^{-1}$ karbohydrater og 0.5 g kg$^{-1}$ fett, etter hver treningsøkt. For å sikre bærekraftighet av treningsprotokollen, ble det lagt opp til at noen av øktene kunne gjennomføres uten tilsyn. For å sikre progresjon og etterlevelse, ble deltakerne instruert til å føre deltaljerte loggbøker for de øktene som ble utført uten tilsyn, slik at forskerteamet kunne i samarbeid med deltakerne gå gjennom øktene. Av alle øktene, ble i gjennomsnitt 91% (SD = 10%, range 67-100%) av øktene gjennomført med tilsyn. 
+Styrketreningen inneholdt en del for beina og en for overkroppen. For beina skulle det gjennomføres unilateral beinpress, knefleksjon og knestrekk, i den nevnte rekkefølgen. Avhengig av gruppen deltakerne ble tildelt til, ble hver øvelse enten utført med ett sett eller tre sett. Beinet som ble tildelt ett-setts protokollen gjennomførte arbeidet sitt mellom det andre og tredje settet til benet som skulle gjennomføre tre sett. Pausene mellom settene skulle vare mellom 90-180 sekunder. Etter beinøvelsene hadde blitt fullført, skulle deltakerne gjøre to sett av bilateral benkpress, nedtrekk og enten skulderpress eller sittende roinger som ble gjort i hver sin økt. Som man kan se fra @fig-trening, så ble treningsintensiteten gradvis økt fra 10RM to første ukene hadde 10RM, til 8RM de påfølgende tre ukene og 7RM de siste syv ukene. Etter den niende treningsøkten hadde hver uke som inneholdt tre økter i uken, en økt med lavere motstand, men der man beholdt samme antall repetisjoner (motstanden tilsvarte 90% av økten før). Øktene med maksimal innsats skulle ikke gjentas før det var gått 48 timer, mens det trengte kun å gå 24 timer mellom ny økt og øktene med redusert motstand. For å fasiletere til restitusjon, ble det gitt en standardisert drikk med 0.15 g kg$^{-1}$ protein, 11.2g kg$^{-1}$ karbohydrater og 0.5 g kg$^{-1}$ fett, etter hver treningsøkt. For å sikre bærekraftighet av treningsprotokollen, ble det lagt opp til at noen av øktene kunne gjennomføres uten tilsyn. For å sikre progresjon og etterlevelse, ble deltakerne instruert til å føre deltaljerte loggbøker for de øktene som ble utført uten tilsyn, slik at forskerteamet kunne i samarbeid med deltakerne gå gjennom øktene. Av alle øktene, ble i gjennomsnitt 91% (SD = 10%, range 67-100%) av øktene gjennomført med tilsyn.
 
 ## Målinger av maksimal muskelstyrke og muskelens tverrsnittsareal
 
-Deltakerne sin maksimale styrke ble satt som deres en repetisjon maksimum (1RM) i unilateral beinpress og knestrekk. Selve testen inneholdt en standardisert oppvarming med 10, 6 og 3 repetisjoner på henholdsvis 50,75 og 85% av deres antatte repetisjon maksimum. Etter dette, ble motstanden gradvis økt helt til deltagerne ikke mestret å løfte vekten gjennom hele bevegelsesbanen, for å finne deres 1RM. Hver deltaker fikk mellom fire og seks forsøk, der den høgeste vekten de mestret å løfte i hver øvelse, ble satt som 1RM. Ved baseline, ble 1RM målt to ganger med minst fire dager mellom hver måling, der den høyeste i hver test ble brukt i videre analyser. I tillegg til nye målinger etter endt intervensjon, gjennomførte en del av deltakerne (n = 18) styrkemålinger underveis i studien (i uke 2, 5 og 9). Det skulle ha gått minst 48 timer fra forrige treningsøkt før styrketest. De resterende som ikke utførte tester underveis, ble de ordinære treningsøktene prioritert ved sykdom eller tidsutfordringer som medførte at de gikk glipp av trening eller test. 
+Deltakerne sin maksimale styrke ble satt som deres en repetisjon maksimum (1RM) i unilateral beinpress og knestrekk. Selve testen inneholdt en standardisert oppvarming med 10, 6 og 3 repetisjoner på henholdsvis 50,75 og 85% av deres antatte repetisjon maksimum. Etter dette, ble motstanden gradvis økt helt til deltagerne ikke mestret å løfte vekten gjennom hele bevegelsesbanen, for å finne deres 1RM. Hver deltaker fikk mellom fire og seks forsøk, der den høgeste vekten de mestret å løfte i hver øvelse, ble satt som 1RM. Ved baseline, ble 1RM målt to ganger med minst fire dager mellom hver måling, der den høyeste i hver test ble brukt i videre analyser. I tillegg til nye målinger etter endt intervensjon, gjennomførte en del av deltakerne (n = 18) styrkemålinger underveis i studien (i uke 2, 5 og 9). Det skulle ha gått minst 48 timer fra forrige treningsøkt før styrketest. De resterende som ikke utførte tester underveis, ble de ordinære treningsøktene prioritert ved sykdom eller tidsutfordringer som medførte at de gikk glipp av trening eller test.
 
-Ved hjelp av magnetisk resonans bildefremstilling (MR), målte man deltagernes quadricep (vastus lateralis, medialis, intermedius og rectus femoris) muskeltverrsnittsareal. Dette ble gjort i henhold til produsentens protokoll (S-Scan, Esaote Europe B.V., Maastricht, Nederland), og personen som skulle analysere MR-bildene var blindet ved hjelp av OsiriX (v.5.6, Pixmeo Sarl, Bernex, Sveits). Målingen av muskeltverrsnittet både før og etter intervensjon, ble gjort på samme sted på låret, cirka midt på, med samme avstand fra kneleddet. Resultatet av målingen måtte inneholde minst fire påfølgende bilder med 5 mm tykkelse og 10mm avstand. 
-
+Ved hjelp av magnetisk resonans bildefremstilling (MR), målte man deltagernes quadricep (vastus lateralis, medialis, intermedius og rectus femoris) muskeltverrsnittsareal. Dette ble gjort i henhold til produsentens protokoll (S-Scan, Esaote Europe B.V., Maastricht, Nederland), og personen som skulle analysere MR-bildene var blindet ved hjelp av OsiriX (v.5.6, Pixmeo Sarl, Bernex, Sveits). Målingen av muskeltverrsnittet både før og etter intervensjon, ble gjort på samme sted på låret, cirka midt på, med samme avstand fra kneleddet. Resultatet av målingen måtte inneholde minst fire påfølgende bilder med 5 mm tykkelse og 10mm avstand.
 
 ## Data analyse og statistikk
 
-Med mindre noe annet er spesifisert, er all deskriptiv data presentert som gjennomsnitt og standardavvik. Før studien ble det gjort en forhåndsbestemt utregning av utvalgsstørrelse, som viste at 40 deltakere ville være tilstrekkelig for å kunne oppdage forskjeller på omtrent 3 og 5 prosentpoeng for muskelens muskeltverrsnittsareal og maksimal styrke mellom de ulike volumforholdene med en ønsket statistisk styrke på 80%. Dette er basert på tall fra tidligere studier, som antar at forskjellene mellom volumforhold tilsvarer en effektstørrelse på mellom 0,19 og 0,24 (@ralston2017; @schoenfeld2016). For å se på hvordan de ulike volumforholdene påvirket muskelvekst og styrke, ble det benyttet lineære blandede modeller (LLM). De relative endringene fra baseline ble satt som den avhengige variabelen, mens antall sett som den uavhengige variabelen. Baseline variabelene, samt kjønn, ble brukt som kovarianter for å kontroller for deres potensielle effekt på muskelvekst og styrke.  
-
-Få med følgende deler:
-
 -   Data analysis and statistics: Describe how you treated the data prior to statistical tests or procedures and what tests/procedures were used to draw inference (or more generally, to answer your purpose). Describe how you present data (e.g. descriptive data with mean (SD), inference with confidence intervals etc.).
 
+Med mindre noe annet er spesifisert, er alle deskriptive data presentert som gjennomsnitt og standardavvik. Før studien ble det gjort en forhåndsberegning av utvalgsstørrelse, som viste at 40 deltakere ville være tilstrekkelig for å kunne oppdage forskjeller på omtrent 3 og 5 prosentpoeng for henholdsvis muskeltverrsnittsareal og maksimal styrke mellom de ulike volumforholdene, med en ønsket statistisk styrke på 80%. Denne beregningen er basert på data fra tidligere studier, som antar at forskjellene mellom volumforholdene tilsvarer en effektstørrelse på mellom 0,19 og 0,24 (@ralston2017; @schoenfeld2016).
+
+For å undersøke hvordan de ulike volumforholdene påvirket muskelvekst og styrke, ble det benyttet lineære blandede modeller (LLM). De relative endringene fra baseline ble satt som den avhengige variabelen, med antall sett som den uavhengige variabelen. For å vurdere om større muskelvekst også gir tilsvarende endringer i muskelstyrke, ble en interaksjonseffekt mellom treningsvolum og endring i muskeltverrsnitt inkludert. Ved å inkludere denne interaksjonseffekten kan modellen fange opp eventuelle forskjeller i effekten av muskelvekst på muskelstyrke under ulike treningsvolum. Baseline-verdier og kjønn ble brukt som kovariater for å kontrollere for deres potensielle effekt på muskelvekst og styrke.
+
+Resultater med et signifikansnivå på $\alpha = 0.05$ ble ansett som statistisk signifikante. Analysen av dataene ble gjort i R (@RCoreTeam2018).
+
 # Resulater
+
+```{r}
+#| echo: false
+#| label: fig-styrke
+#| fig-cap: "Utvikling i muskelstyrke for leg press og leg extension"
+
+# Utregning av gjennomsnitt og SD for muskelstyrke
+
+library(dplyr)
+
+strength_mean.sd <- strengthvolume %>% 
+  filter(exercise %in% c("legpress", "legext")) %>% 
+  group_by(time, sets, sex, exercise) %>% 
+  summarise(mean_strength = mean(load, na.rm = TRUE),
+            sd_strength = sd(load, na.rm = TRUE)) %>% 
+  ungroup()
+
+# Diagram av utviklingen i muskelstyrke
+
+library(ggplot2)
+
+## Endre navn på tidspunktene
+
+strength <- strength_mean.sd %>%
+  mutate(time = recode(time,
+                       "pre" = "Pre",
+                       "session1" = "Uke 1",
+                       "week2" = "Uke 2",
+                       "week5" = "Uke 5",
+                       "week9" = "Uke 9",
+                       "post" = "Post"),
+         time = factor(time, levels = c("Pre", "Uke 1", "Uke 2", "Uke 5", "Uke 9", "Post")))
+
+ggplot(strength, aes(x = time, y = mean_strength, color = sets, shape = sex, group = interaction(sets, sex, exercise))) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  geom_errorbar(aes(ymin = mean_strength - sd_strength, ymax = mean_strength + sd_strength), width = 0.2) +
+  facet_wrap(~ exercise) +
+  labs(x = "Tidspunkt", y = "Gjennomsnittlig muskelstyrke (kg)", color = "Treningsvolum", shape = "Kj\u00F8nn") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+```{r}
+#| echo: false
+#| label: tbl-muskeltverr
+#| tbl-cap: "Oppsummering av muskeltverrsnitt før og etter intervensjon (kombinert for kjønn, kun pre og post)"
+
+# Utregning av gjennomsnitt og SD for muskeltverrsnitt
+library(dplyr)
+library(knitr)
+library(ggplot2)
+
+# Dataprosessering - omstrukturering og kombinering av data for høyre og venstre ben
+muskeltverr <- dxadata %>%
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(
+    cols = lean.left_leg:lean.right_leg, 
+    names_to = "leg", 
+    values_to = "lean.mass"
+  ) %>%
+  mutate(
+    leg = if_else(leg == "lean.left_leg", "L", "R"), 
+    sets = if_else(multiple == leg, "multiple", "single")
+  ) %>%
+  select(participant, time, sex, include, sets, leg, lean.mass)
+
+# Oppsummering av gjennomsnitt og standardavvik etter tid, treningsvolum og kjønn
+muskeltverr_summary <- muskeltverr %>% 
+  group_by(time, sets, sex) %>% 
+  summarise(
+    mean_lean_mass = mean(lean.mass, na.rm = TRUE),
+    sd_lean_mass = sd(lean.mass, na.rm = TRUE),
+    .groups = "drop"  # Fjerner grupperingen automatisk etter summarise
+  )
+
+# Filtrer til pre og post tidspunkter og kombiner kjønn for en enklere oversikt
+muskeltverr_summary_pre_post <- muskeltverr_summary %>%
+  filter(time %in% c("pre", "post")) %>%
+  group_by(time, sets) %>%
+  summarise(
+    mean_lean_mass = mean(mean_lean_mass, na.rm = TRUE),
+    sd_lean_mass = sqrt(mean(sd_lean_mass^2, na.rm = TRUE)),  # Kombinert SD ved å bruke kvadratet av SD
+    .groups = "drop"
+  ) %>%
+  arrange(time, sets)  # Sortér etter tid og treningsvolum
+
+# Lag en oversiktlig tabell
+muskeltverr_summary_pre_post %>%
+  kable(
+    col.names = c("Tidspunkt", "Treningsvolum", "Gjennomsnittlig muskeltverrsnitt (g)", "Standardavvik (SD)"))
+```
+
 
 # Diskusjon
