@@ -1,34 +1,70 @@
-# Last inn dataene
+# Last inn nødvendige pakker
 library(exscidata)
 library(tidyverse)
-library(dplyr)
 library(nlme)
-library(MASS)
+library(ggplot2)
+library(gridExtra)
 data("strengthvolume"); data("dxadata")
 
-# Filtrer datasettet for `legext`
+# Forbered dataene
 strengthvolume_legext <- strengthvolume %>%
-  filter(exercise == "legext")
+  filter(exercise == "legext") %>%
+  mutate(time = factor(time, levels = c("pre", "session1", "week2", "week5", "week9", "post")))
 
-# Modell for muskelstyrke i legext øvelsen uten manglende verdier
+# Bygg modellen
 model_legext <- lme(
   fixed = load ~ time * sets + sex,
   random = ~ 1 | participant,
-  data = strengthvolume %>% filter(exercise == "legext"),
+  data = strengthvolume_legext,
   na.action = na.omit
 )
 
-summary(model_legext)
+# Undertrykk output av modelloppsummering
+summary_modlegext <- summary(model_legext)
 
-# Ekstraher residualene fra modellen
+# Ekstraher residualer og predikerte verdier
 residuals_legext <- residuals(model_legext)
-
-# Ekstraher predikerte verdier fra modellen
 fitted_values_legext <- fitted(model_legext)
 
-# Q-Q plot
-qqnorm(residuals_legext)
-qqline(residuals_legext, col = "red")
+# Lag plottene
+qq_plot <- ggplot(data = data.frame(residuals = residuals_legext), aes(sample = residuals)) +
+  stat_qq() +
+  stat_qq_line(color = "red") +
+  ggtitle("Q-Q Plot") +
+  theme_minimal()
+
+resid_fitted_plot <- ggplot(data = data.frame(fitted = fitted_values_legext, residuals = residuals_legext),
+                            aes(x = fitted, y = residuals)) +
+  geom_point() +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  ggtitle("Residualer vs. Predikerte Verdier") +
+  xlab("Predikerte Verdier") +
+  ylab("Residualer") +
+  theme_minimal()
+
+hist_plot <- ggplot(data = data.frame(residuals = residuals_legext), aes(x = residuals)) +
+  geom_histogram(bins = 20, fill = "blue", color = "black") +
+  ggtitle("Histogram av Residualer") +
+  xlab("Residualer") +
+  ylab("Frekvens") +
+  theme_minimal()
+
+# Arranger plottene
+grid.arrange(qq_plot, resid_fitted_plot, hist_plot, nrow = 2)
+
+
+# Plotting
+ggplot(strengthvolume_legext, aes(x = time, y = load, color = sets, shape = sex, group = interaction(sets, sex))) +
+  stat_summary(fun = mean, geom = "line", size = 1) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.2) + 
+  labs(
+    title = "Utvikling av Muskelstyrke i Leg Extension", 
+    x = "Tidspunkt", 
+    y = "Muskelstyrke (kg)", 
+    color = "Treningsvolum", 
+    shape = "Kjønn"
+  ) +
+  theme_minimal()
 
 # Utfør Box-Cox for `legext`
 boxcox_model_legext <- boxcox(lm(load ~ time * sets + sex, data = strengthvolume_legext))
@@ -78,3 +114,17 @@ ggplot(data = residuals_data_legext, aes(x = Residuals)) +
   geom_histogram(binwidth = 0.05, fill = "steelblue", color = "black", alpha = 0.7) +
   labs(x = "Residualer", y = "Frekvens", title = "Histogram av Residualer for Leg Extension") +
   theme_minimal()
+
+# Summary av den nye modellen
+summary(model_log_legext)
+
+# Modell for muskelstyrke i leg extension uten transformasjon
+model_legext_untransformed <- lme(
+  fixed = load ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = strengthvolume %>% filter(exercise == "legext"),
+  na.action = na.omit
+)
+
+# Sammendrag av modellen
+summary(model_legext_untransformed)
