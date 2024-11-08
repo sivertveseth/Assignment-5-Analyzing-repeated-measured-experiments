@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -107,8 +141,17 @@ window.Quarto = {
   <li><a href="#målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal" id="toc-målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal" class="nav-link" data-scroll-target="#målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal"><span class="header-section-number">2.3</span> Målinger av maksimal muskelstyrke og muskelens tverrsnittsareal</a></li>
   <li><a href="#data-analyse-og-statistikk" id="toc-data-analyse-og-statistikk" class="nav-link" data-scroll-target="#data-analyse-og-statistikk"><span class="header-section-number">2.4</span> Data analyse og statistikk</a></li>
   </ul></li>
-  <li><a href="#resulater" id="toc-resulater" class="nav-link" data-scroll-target="#resulater"><span class="header-section-number">3</span> Resulater</a></li>
-  <li><a href="#diskusjon" id="toc-diskusjon" class="nav-link" data-scroll-target="#diskusjon"><span class="header-section-number">4</span> Diskusjon</a></li>
+  <li><a href="#resultater" id="toc-resultater" class="nav-link" data-scroll-target="#resultater"><span class="header-section-number">3</span> Resultater</a>
+  <ul class="collapse">
+  <li><a href="#endring-i-muskelstyrke" id="toc-endring-i-muskelstyrke" class="nav-link" data-scroll-target="#endring-i-muskelstyrke"><span class="header-section-number">3.1</span> Endring i muskelstyrke</a></li>
+  <li><a href="#endring-i-muskeltverssnitt" id="toc-endring-i-muskeltverssnitt" class="nav-link" data-scroll-target="#endring-i-muskeltverssnitt"><span class="header-section-number">3.2</span> Endring i muskeltverssnitt</a></li>
+  </ul></li>
+  <li><a href="#diskusjon" id="toc-diskusjon" class="nav-link" data-scroll-target="#diskusjon"><span class="header-section-number">4</span> Diskusjon</a>
+  <ul class="collapse">
+  <li><a href="#begrensninger" id="toc-begrensninger" class="nav-link" data-scroll-target="#begrensninger"><span class="header-section-number">4.1</span> Begrensninger</a></li>
+  <li><a href="#implikasjoner-for-fremtidig-forskning" id="toc-implikasjoner-for-fremtidig-forskning" class="nav-link" data-scroll-target="#implikasjoner-for-fremtidig-forskning"><span class="header-section-number">4.2</span> Implikasjoner for fremtidig forskning</a></li>
+  <li><a href="#konklusjon" id="toc-konklusjon" class="nav-link" data-scroll-target="#konklusjon"><span class="header-section-number">4.3</span> Konklusjon</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -141,39 +184,15 @@ window.Quarto = {
 
 <section id="introduksjon" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduksjon</h1>
-<p>Avsnitt 1:</p>
-<p>Treningsadaptasjon er en av de mest grunnleggende søylene i treningsvitenskapen, som sier at kroppen vår kan tilpasse seg den belastningen den utsettes for, gitt at den får nok tid til å tilpasse seg den nye belastningen (<span class="citation" data-cites="bompa2019">Bompa &amp; Buzzichelli (<a href="#ref-bompa2019" role="doc-biblioref">2019</a>)</span>, s. 8). Spesielt skjelettmuskulaturen har vist seg å være et høgts tilpasningsdyktig vev som kan endre sin egen arkitektur som respons på en gitt stimuli (<span class="citation" data-cites="coffey2007">Coffey &amp; Hawley (<a href="#ref-coffey2007" role="doc-biblioref">2007</a>)</span>). Resultatene på disse tilpasningene er påvirket av volumet, intensiteten og frekvensen av treningen, i tillegg vil tilpasningene avhengig av den spesifikke belastningen kroppen og muskulaturen utsettes for, for eksempel treningsmetode (<span class="citation" data-cites="bompa2019">Bompa &amp; Buzzichelli (<a href="#ref-bompa2019" role="doc-biblioref">2019</a>)</span>, s.3; <span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.17;<span class="citation" data-cites="coffey2007">Coffey &amp; Hawley (<a href="#ref-coffey2007" role="doc-biblioref">2007</a>)</span>;<span class="citation" data-cites="izquierdo2004">Izquierdo et al. (<a href="#ref-izquierdo2004" role="doc-biblioref">2004</a>)</span>).</p>
+<p>Treningsadaptasjon er en av de mest grunnleggende søylene i treningsvitenskapen, som sier at kroppen vår kan tilpasse seg den belastningen den utsettes for, gitt at den får nok tid til å tilpasse seg den nye belastningen (<span class="citation" data-cites="bompa2019">Bompa &amp; Buzzichelli (<a href="#ref-bompa2019" role="doc-biblioref">2019</a>)</span>, s. 8). Spesielt skjelettmuskulaturen har vist seg å være et høgts tilpasningsdyktig vev som kan endre sin egen arkitektur som respons på en gitt stimuli (<span class="citation" data-cites="coffey2007">Coffey &amp; Hawley (<a href="#ref-coffey2007" role="doc-biblioref">2007</a>)</span>). Resultatene på disse tilpasningene er påvirket av volumet, intensiteten og frekvensen av treningen, i tillegg vil tilpasningene avhengig av den spesifikke belastningen kroppen og muskulaturen utsettes for, for eksempel treningsmetode (<span class="citation" data-cites="bompa2019">Bompa &amp; Buzzichelli (<a href="#ref-bompa2019" role="doc-biblioref">2019</a>)</span>, s.3; <span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.17; <span class="citation" data-cites="coffey2007">Coffey &amp; Hawley (<a href="#ref-coffey2007" role="doc-biblioref">2007</a>)</span>; <span class="citation" data-cites="izquierdo2004">Izquierdo et al. (<a href="#ref-izquierdo2004" role="doc-biblioref">2004</a>)</span>).</p>
 <p>Styrketrening har vist seg å være avgjørende, ikke bare for idrettsprestasjoner (<span class="citation" data-cites="washif2022">Washif &amp; Kok (<a href="#ref-washif2022" role="doc-biblioref">2022</a>)</span>), men også for folkehelse og redusert dødelighet (<span class="citation" data-cites="ruiz2008">Ruiz et al. (<a href="#ref-ruiz2008" role="doc-biblioref">2008</a>)</span>). Denne treningsformen omfatter aktiviteter som utvikler eller opprettholder vår evne til å generer maksimal kraft eller dreiemoment ved en spesifikk hastighet (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.17). Trening for maksimal muskelstyrke, der målet er å øke den høyeste kraften en muskel kan produsere (målt som en repetisjon maksimum) (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.13), skiller seg fra trening med hensikt om muskelvekst (hypertrofi), hvor fokus ligger på å øke muskelens størrelse (<span class="citation" data-cites="schoenfeld2016">Schoenfeld et al. (<a href="#ref-schoenfeld2016" role="doc-biblioref">2016</a>)</span>). Flere studier har undersøkt hvilket treningsvolum som best stimulerer slike tilpasninger og har identifisert et dose-respons-forhold, hvor økt treningsvolum er assosiert med større muskelvekst (<span class="citation" data-cites="currier2023">Currier et al. (<a href="#ref-currier2023" role="doc-biblioref">2023</a>)</span>; <span class="citation" data-cites="schoenfeld2016">Schoenfeld et al. (<a href="#ref-schoenfeld2016" role="doc-biblioref">2016</a>)</span>). Et lignende forhold er også blitt observert for muskelstyrke (<span class="citation" data-cites="ralston2017">Ralston et al. (<a href="#ref-ralston2017" role="doc-biblioref">2017</a>)</span>), selv om det er også foreslått at et høgt treningsvolum kan bremse utviklingen av maksimal muskelstyrke (<span class="citation" data-cites="zhang2023">Zhang et al. (<a href="#ref-zhang2023" role="doc-biblioref">2023</a>)</span>). Muskelens tverrsnitt er en sentral faktor å ta med, da et større tverrsnitt vil gi et større potensiale for kraftutvikling (<span class="citation" data-cites="Raastad2010">Raastad et al. (<a href="#ref-Raastad2010" role="doc-biblioref">2010</a>)</span>, s.20). Dette understreker behovet for videre undersøkelser av hvordan treningsvolum påvirker både muskelhypertrofi og styrkeutvikling, samt i hvilken grad endringer i muskelmasse er sammenfallende med økninger i styrke.</p>
-<p>På bakgrunn av tidligere forskning og den noe usikre dose-respons-sammenhengen mellom optimal treningsvolum og muskeltilpasninger, er formålet med denne studien å undersøke hvordan ulike nivåer av treningsvolum påvirker både muskelvekst og muskelstyrke. Ettersom at skjelettmuskulaturen er svært tilpasningsdyktig på den stimulien den utsettes for, ønsker studien også å undersøke om større endringer i muskelvekst følger sammen med tilsvarende endringer i muskelstyrke ved høyere treningsvolum. Ved å utforske denne sammenhengen håper man å kunne bidra med økt innsikt som kan være nyttig ved anbefalinger om optimalt treningsvolum.</p>
-<ul>
-<li>Introdusere leseren for kva som skal bli undersøkt. Sentrale punkter å få med er:
-<ul>
-<li>Hensikten med trening generelt, og knytt det opp mot styrketrening - kva er dette? For inspirasjon se eksamensoppgåve i styrkefaget.</li>
-<li>Forholdet mellom økt lean body mass og styrketrening (dose-respons forholdet)- tett knyttet til hverandre, samtidig som det ses en diskrepans når man sammenligner dose-respons forholdet på lean body mass og muskelstyrke.</li>
-</ul></li>
-</ul>
-<p>Avsnitt 2:</p>
-<ul>
-<li>Benytt dette avsnittet til å forklare mer i detalj mekanismene bak økning i lean body mass og muskelstyrke. Sentrale definisjoner å få inn vil være
-<ul>
-<li>Lean body mass</li>
-<li>Muskelstyrke, maksimal styrke</li>
-<li>Hva er det som er med å bestemme muskelstyrken vår (se Raastad for inspirasjon)</li>
-<li>Dose-respons forholdet</li>
-<li>Treningsvolum</li>
-<li>Kan være fint å få inn intensitet og grad av anstrengelse</li>
-</ul></li>
-</ul>
-<p>Avsnitt 3:</p>
-<ul>
-<li>Mange som argumenterer for at tverrsnitsarealet av muskulatur er den viktigaste faktoren for vår maksimale styrke. Utfordrer derfor dette synet, og ønsker å se på om økning i muskelmasse kan være et godt mål på økning i muskelstyrke.</li>
-</ul>
+<p>På bakgrunn av tidligere forskning og den noe usikre dose-respons-sammenhengen mellom optimal treningsvolum og muskeltilpasninger, er formålet med denne studien å undersøke hvordan ulike nivåer av treningsvolum påvirker både muskelvekst og muskelstyrke, ettersom skjelettmuskulaturen er svært tilpasningsdyktig på den stimulien den utsettes for. Ved å utforske denne sammenhengen håper man å kunne bidra med økt innsikt som kan være nyttig ved anbefalinger om optimalt treningsvolum.</p>
 </section>
 <section id="metode" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Metode</h1>
 <section id="deltagere-og-studieoversikt" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="deltagere-og-studieoversikt"><span class="header-section-number">2.1</span> Deltagere og studieoversikt</h2>
-<p>Totalt ble førti-en menn og kvinner inkludert i studien, der inklusjonskriterene var at de ikke var røykere og var mellom 18 og 40 år. Klare eksklusjonskriterer som redusert muskelstyrke grunnet tidligere eller nåværende skader, har hatt mer en en ukentlig styrketrenings økt de siste 12 månedene fra inklusjonsdato, intoleranse for lokal bedøvelse, samt bruk av medikamenter som kan påvirke treningsadaptasjoner. Syv deltakere ble ekskludert fra data analysen, fordi de ikke hadde gjennomført minimum 85% av de oppsatte treningene grunnet årsaker som: ubehag eller smerter i underekstremitetene under trening (<em>n = 5</em>), skade påført utenom studieprotokollen (<em>n = 1</em>), eller manglende overholdelse av studiedesignet (<em>n = 1</em>). <em>Det var ingen forskjeller i antropometriske data og maksimal frivillig kontraksjon (MFK) normalisert for kroppsvekt, mellom de inkluderte og ekskluderte deltagerne ved baseline, se <a href="#tbl-antro" class="quarto-xref">Table&nbsp;1</a>. Selv om ingen av de inkluderte deltakerne utførte mer en 1 ukentlig styrkeøkt, var det tjue deltakere som rapporterte at de var fysisk aktive ved inklusjon (median på 2 økter i uken, med en range på 0.5-4). Alle de inkluderte hadde tidligere treningserfaringer med ulike idretter, som for eksempel lagidretter, skiskytting etc…).</em> <strong>Eg er usikker på om eg kan ha med denne dataen, siden den ikkje kan vises til i datasettet</strong>.</p>
+<p>Totalt ble førti-en menn og kvinner inkludert i studien, der inklusjonskriterene var at de ikke var røykere og var mellom 18 og 40 år. Klare eksklusjonskriterer som redusert muskelstyrke grunnet tidligere eller nåværende skader, har hatt mer en en ukentlig styrketrenings økt de siste 12 månedene fra inklusjonsdato, intoleranse for lokal bedøvelse, samt bruk av medikamenter som kan påvirke treningsadaptasjoner. Syv deltakere ble ekskludert fra data analysen, fordi de ikke hadde gjennomført minimum 85% av de oppsatte treningene grunnet årsaker som: ubehag eller smerter i underekstremitetene under trening (<em>n = 5</em>), skade påført utenom studieprotokollen (<em>n = 1</em>), eller manglende overholdelse av studiedesignet (<em>n = 1</em>). Selv om ingen av de inkluderte deltakerne utførte mer en 1 ukentlig styrkeøkt, var det tjue deltakere som rapporterte at de var fysisk aktive ved inklusjon (median på 2 økter i uken, med en range på 0.5-4). Alle de inkluderte hadde tidligere treningserfaringer med ulike idretter, som for eksempel lagidretter, skiskytting etc…).</p>
 <div class="cell">
 <div id="tbl-antro" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -266,8 +285,8 @@ Figur&nbsp;1
 </section>
 <section id="styrketreningsprotokoll" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="styrketreningsprotokoll"><span class="header-section-number">2.2</span> Styrketreningsprotokoll</h2>
-<p>Det ble laget en standardisert oppvarming som deltakerne skulle gjennomføre før de begynte med styrketreningen. Oppvarmingen begynte med 5 minutter på ergometer sykkel, der de skulle holde 12-14 på gjennomgått grad av anstrengelse (RPE, se bilde under). Etter syklingen skulle de gjennomføre 10 repetisjoner av push-ups (tilpasset vanskelighetsgrad basert på vinkel), sit-ups, knebøy og rygghev, etterfulgt av et sett med 10 repetisjoner av hver styrkeøvelse med en motstand tilsvarende rundt 50% av deres repetisjons maksimum (1RM).</p>
-<p>Styrketreningen inneholdt en del for beina og en for overkroppen. For beina skulle det gjennomføres unilateral beinpress, knefleksjon og knestrekk, i den nevnte rekkefølgen. Avhengig av gruppen deltakerne ble tildelt til, ble hver øvelse enten utført med ett sett eller tre sett. Beinet som ble tildelt ett-setts protokollen gjennomførte arbeidet sitt mellom det andre og tredje settet til benet som skulle gjennomføre tre sett. Pausene mellom settene skulle vare mellom 90-180 sekunder. Etter beinøvelsene hadde blitt fullført, skulle deltakerne gjøre to sett av bilateral benkpress, nedtrekk og enten skulderpress eller sittende roinger som ble gjort i hver sin økt. Som man kan se fra <a href="#fig-trening" class="quarto-xref">Figure&nbsp;1</a>, så ble treningsintensiteten gradvis økt fra 10RM to første ukene hadde 10RM, til 8RM de påfølgende tre ukene og 7RM de siste syv ukene. Etter den niende treningsøkten hadde hver uke som inneholdt tre økter i uken, en økt med lavere motstand, men der man beholdt samme antall repetisjoner (motstanden tilsvarte 90% av økten før). Øktene med maksimal innsats skulle ikke gjentas før det var gått 48 timer, mens det trengte kun å gå 24 timer mellom ny økt og øktene med redusert motstand. For å fasiletere til restitusjon, ble det gitt en standardisert drikk med 0.15 g kg<span class="math inline">\(^{-1}\)</span> protein, 11.2g kg<span class="math inline">\(^{-1}\)</span> karbohydrater og 0.5 g kg<span class="math inline">\(^{-1}\)</span> fett, etter hver treningsøkt. For å sikre bærekraftighet av treningsprotokollen, ble det lagt opp til at noen av øktene kunne gjennomføres uten tilsyn. For å sikre progresjon og etterlevelse, ble deltakerne instruert til å føre deltaljerte loggbøker for de øktene som ble utført uten tilsyn, slik at forskerteamet kunne i samarbeid med deltakerne gå gjennom øktene. Av alle øktene, ble i gjennomsnitt 91% (SD = 10%, range 67-100%) av øktene gjennomført med tilsyn.</p>
+<p>Det ble laget en standardisert oppvarming som deltakerne skulle gjennomføre før de begynte med styrketreningen. Oppvarmingen begynte med 5 minutter på ergometer sykkel, der de skulle holde 12-14 på gjennomgått grad av anstrengelse (RPE). Etter syklingen skulle de gjennomføre 10 repetisjoner av push-ups (tilpasset vanskelighetsgrad basert på vinkel), sit-ups, knebøy og rygghev, etterfulgt av et sett med 10 repetisjoner av hver styrkeøvelse med en motstand tilsvarende rundt 50% av deres repetisjons maksimum (1RM).</p>
+<p>Styrketreningen inneholdt en del for beina og en for overkroppen. For beina skulle det gjennomføres unilateral beinpress, knefleksjon og knestrekk, i den nevnte rekkefølgen. Avhengig av gruppen deltakerne ble tildelt til, ble hver øvelse enten utført med ett sett eller tre sett. Beinet som ble tildelt ett-setts protokollen gjennomførte arbeidet sitt mellom det andre og tredje settet til benet som skulle gjennomføre tre sett. Pausene mellom settene skulle vare mellom 90-180 sekunder. Etter beinøvelsene hadde blitt fullført, skulle deltakerne gjøre to sett av bilateral benkpress, nedtrekk og enten skulderpress eller sittende roinger som ble gjort i hver sin økt. Som man kan se fra <a href="#fig-trening" class="quarto-xref">Figure&nbsp;1</a>, så ble treningsintensiteten gradvis økt fra 10RM to første ukene hadde 10RM, til 8RM de påfølgende tre ukene og 7RM de siste syv ukene. Etter den niende treningsøkten hadde hver uke som inneholdt tre økter i uken, en økt med lavere motstand, men der man beholdt samme antall repetisjoner (motstanden tilsvarte 90% av økten før). Øktene med maksimal innsats skulle ikke gjentas før det var gått 48 timer, mens det trengte kun å gå 24 timer mellom ny økt og øktene med redusert motstand. For å fasiletere til restitusjon, ble det gitt en standardisert drikk med 0.15 g kg<span class="math inline">\(^{-1}\)</span> protein, 11.2g kg<span class="math inline">\(^{-1}\)</span> karbohydrater og 0.5 g kg<span class="math inline">\(^{-1}\)</span> fett, etter hver treningsøkt. For å sikre bærekraftighet av treningsprotokollen, ble det lagt opp til at noen av øktene kunne gjennomføres uten tilsyn. For å sikre progresjon og etterlevelse, ble deltakerne instruert til å føre deltaljerte loggbøker for de øktene som ble utført uten tilsyn, slik at forskerteamet kunne i samarbeid med deltakerne gå gjennom øktene.</p>
 </section>
 <section id="målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="målinger-av-maksimal-muskelstyrke-og-muskelens-tverrsnittsareal"><span class="header-section-number">2.3</span> Målinger av maksimal muskelstyrke og muskelens tverrsnittsareal</h2>
@@ -276,35 +295,1222 @@ Figur&nbsp;1
 </section>
 <section id="data-analyse-og-statistikk" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="data-analyse-og-statistikk"><span class="header-section-number">2.4</span> Data analyse og statistikk</h2>
-<ul>
-<li>Data analysis and statistics: Describe how you treated the data prior to statistical tests or procedures and what tests/procedures were used to draw inference (or more generally, to answer your purpose). Describe how you present data (e.g.&nbsp;descriptive data with mean (SD), inference with confidence intervals etc.).</li>
-</ul>
 <p>Med mindre noe annet er spesifisert, er alle deskriptive data presentert som gjennomsnitt og standardavvik. Før studien ble det gjort en forhåndsberegning av utvalgsstørrelse, som viste at 40 deltakere ville være tilstrekkelig for å kunne oppdage forskjeller på omtrent 3 og 5 prosentpoeng for henholdsvis muskeltverrsnittsareal og maksimal styrke mellom de ulike volumforholdene, med en ønsket statistisk styrke på 80%. Denne beregningen er basert på data fra tidligere studier, som antar at forskjellene mellom volumforholdene tilsvarer en effektstørrelse på mellom 0,19 og 0,24 (<span class="citation" data-cites="ralston2017">Ralston et al. (<a href="#ref-ralston2017" role="doc-biblioref">2017</a>)</span>; <span class="citation" data-cites="schoenfeld2016">Schoenfeld et al. (<a href="#ref-schoenfeld2016" role="doc-biblioref">2016</a>)</span>).</p>
 <p>For å undersøke hvordan de ulike volumforholdene påvirket muskelvekst og styrke, ble det benyttet lineære blandede modeller (LLM). De relative endringene fra baseline ble satt som den avhengige variabelen, med antall sett som den uavhengige variabelen. For å vurdere om større muskelvekst også gir tilsvarende endringer i muskelstyrke, ble en interaksjonseffekt mellom treningsvolum og endring i muskeltverrsnitt inkludert. Ved å inkludere denne interaksjonseffekten kan modellen fange opp eventuelle forskjeller i effekten av muskelvekst på muskelstyrke under ulike treningsvolum. Baseline-verdier og kjønn ble brukt som kovariater for å kontrollere for deres potensielle effekt på muskelvekst og styrke.</p>
+<p>For å evaluere om de statistiske modellene oppfylte forutsetningene for lineære blandede modeller, ble diagnostiske plot undersøkt. Q-Q plot ble brukt for å vurdere normaliteten til residualene, residualer mot predikerte verdier for å sjekke for homoskedastisitet, og histogram av residualer for å identifisere eventuelle skjevheter eller avvik.</p>
 <p>Resultater med et signifikansnivå på <span class="math inline">\(\alpha = 0.05\)</span> ble ansett som statistisk signifikante. Analysen av dataene ble gjort i R (<span class="citation" data-cites="RCoreTeam2018">R Core Team (<a href="#ref-RCoreTeam2018" role="doc-biblioref">2018</a>)</span>).</p>
 </section>
 </section>
-<section id="resulater" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Resulater</h1>
+<section id="resultater" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Resultater</h1>
+<p>Under i <a href="#tbl-modeller" class="quarto-xref">Table&nbsp;2</a>, er det en oversikt over de sentrale parametrene for de tre LMM-ene som ble brukt i denne studien.</p>
+<div id="tbl-modeller" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-modeller-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabell&nbsp;2: Oppsummering av Modellene for Pre og Post
+</figcaption>
+<div aria-describedby="tbl-modeller-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="gtxfoddlmg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gtxfoddlmg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gtxfoddlmg thead, #gtxfoddlmg tbody, #gtxfoddlmg tfoot, #gtxfoddlmg tr, #gtxfoddlmg td, #gtxfoddlmg th {
+  border-style: none;
+}
+
+#gtxfoddlmg p {
+  margin: 0;
+  padding: 0;
+}
+
+#gtxfoddlmg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gtxfoddlmg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gtxfoddlmg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gtxfoddlmg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gtxfoddlmg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gtxfoddlmg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gtxfoddlmg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gtxfoddlmg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gtxfoddlmg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gtxfoddlmg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gtxfoddlmg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gtxfoddlmg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gtxfoddlmg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gtxfoddlmg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gtxfoddlmg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gtxfoddlmg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gtxfoddlmg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gtxfoddlmg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gtxfoddlmg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gtxfoddlmg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gtxfoddlmg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gtxfoddlmg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gtxfoddlmg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gtxfoddlmg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gtxfoddlmg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gtxfoddlmg .gt_left {
+  text-align: left;
+}
+
+#gtxfoddlmg .gt_center {
+  text-align: center;
+}
+
+#gtxfoddlmg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gtxfoddlmg .gt_font_normal {
+  font-weight: normal;
+}
+
+#gtxfoddlmg .gt_font_bold {
+  font-weight: bold;
+}
+
+#gtxfoddlmg .gt_font_italic {
+  font-style: italic;
+}
+
+#gtxfoddlmg .gt_super {
+  font-size: 65%;
+}
+
+#gtxfoddlmg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gtxfoddlmg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gtxfoddlmg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gtxfoddlmg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gtxfoddlmg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gtxfoddlmg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gtxfoddlmg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#gtxfoddlmg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#gtxfoddlmg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="6" class="gt_heading gt_title gt_font_normal">Oppsummering av Modellene for Pre og Post</th>
+</tr>
+<tr class="odd gt_heading">
+<th colspan="6" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Inkludert Forskjeller Mellom Single og Multiple Sett</th>
+</tr>
+<tr class="header gt_col_headings">
+<th id="model" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Modell</th>
+<th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Parameter</th>
+<th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Estimert Koeffisient</th>
+<th id="std.error" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Standard Feil</th>
+<th id="statistic" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">t-verdi</th>
+<th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">p-verdi</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="model">Model 1.1: Leg Extension</td>
+<td class="gt_row gt_left" headers="term">(Intercept)</td>
+<td class="gt_row gt_right" headers="estimate">43.479</td>
+<td class="gt_row gt_right" headers="std.error">2.836</td>
+<td class="gt_row gt_right" headers="statistic">15.334</td>
+<td class="gt_row gt_right" headers="p.value">0.05*</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="model">Model 1.1: Leg Extension</td>
+<td class="gt_row gt_left" headers="term">timepost</td>
+<td class="gt_row gt_right" headers="estimate">33.089</td>
+<td class="gt_row gt_right" headers="std.error">1.539</td>
+<td class="gt_row gt_right" headers="statistic">21.499</td>
+<td class="gt_row gt_right" headers="p.value">0.05*</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="model">Model 1.1: Leg Extension</td>
+<td class="gt_row gt_left" headers="term">timepost:setssingle</td>
+<td class="gt_row gt_right" headers="estimate">−4.278</td>
+<td class="gt_row gt_right" headers="std.error">2.188</td>
+<td class="gt_row gt_right" headers="statistic">−1.956</td>
+<td class="gt_row gt_right" headers="p.value">0.0513</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="model">Model 1.2: Leg Press</td>
+<td class="gt_row gt_left" headers="term">(Intercept)</td>
+<td class="gt_row gt_right" headers="estimate">138.164</td>
+<td class="gt_row gt_right" headers="std.error">12.091</td>
+<td class="gt_row gt_right" headers="statistic">11.427</td>
+<td class="gt_row gt_right" headers="p.value">0.05*</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="model">Model 1.2: Leg Press</td>
+<td class="gt_row gt_left" headers="term">timepost</td>
+<td class="gt_row gt_right" headers="estimate">95.326</td>
+<td class="gt_row gt_right" headers="std.error">4.158</td>
+<td class="gt_row gt_right" headers="statistic">22.926</td>
+<td class="gt_row gt_right" headers="p.value">0.05*</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="model">Model 1.2: Leg Press</td>
+<td class="gt_row gt_left" headers="term">timepost:setssingle</td>
+<td class="gt_row gt_right" headers="estimate">−8.541</td>
+<td class="gt_row gt_right" headers="std.error">5.865</td>
+<td class="gt_row gt_right" headers="statistic">−1.456</td>
+<td class="gt_row gt_right" headers="p.value">0.1462</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="model">Model 2: Muskel Tverrsnitt</td>
+<td class="gt_row gt_left" headers="term">(Intercept)</td>
+<td class="gt_row gt_right" headers="estimate">7,126.800</td>
+<td class="gt_row gt_right" headers="std.error">254.701</td>
+<td class="gt_row gt_right" headers="statistic">27.981</td>
+<td class="gt_row gt_right" headers="p.value">0.05*</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="model">Model 2: Muskel Tverrsnitt</td>
+<td class="gt_row gt_left" headers="term">timepost</td>
+<td class="gt_row gt_right" headers="estimate">289.876</td>
+<td class="gt_row gt_right" headers="std.error">55.046</td>
+<td class="gt_row gt_right" headers="statistic">5.266</td>
+<td class="gt_row gt_right" headers="p.value">0.05*</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="model">Model 2: Muskel Tverrsnitt</td>
+<td class="gt_row gt_left" headers="term">timepost:setssingle</td>
+<td class="gt_row gt_right" headers="estimate">−118.167</td>
+<td class="gt_row gt_right" headers="std.error">77.375</td>
+<td class="gt_row gt_right" headers="statistic">−1.527</td>
+<td class="gt_row gt_right" headers="p.value">0.1294</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</figure>
+</div>
+<section id="endring-i-muskelstyrke" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="endring-i-muskelstyrke"><span class="header-section-number">3.1</span> Endring i muskelstyrke</h2>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrer datasettet for leg press-øvelsen og sett 'time' som en faktor med ønsket rekkefølge</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>strengthvolume_legpress <span class="ot">&lt;-</span> strengthvolume <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(exercise <span class="sc">==</span> <span class="st">"legpress"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">time =</span> <span class="fu">factor</span>(time, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"pre"</span>, <span class="st">"session1"</span>, <span class="st">"week2"</span>, <span class="st">"week5"</span>, <span class="st">"week9"</span>, <span class="st">"post"</span>)))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Modell for muskelstyrke i legpress-øvelsen uten manglende verdier</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>model_legpress <span class="ot">&lt;-</span> <span class="fu">lme</span>(</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">fixed =</span> load <span class="sc">~</span> time <span class="sc">*</span> sets <span class="sc">+</span> sex,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">random =</span> <span class="sc">~</span> <span class="dv">1</span> <span class="sc">|</span> participant,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> strengthvolume_legpress,  <span class="co"># Bruker det oppdaterte datasettet</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">na.action =</span> na.omit</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Oppsummer modellresultatene</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>summary_modell_legpress <span class="ot">&lt;-</span> <span class="fu">summary</span>(model_legpress)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Hent ut estimatet og standardfeilen for 'post'</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>post_koeff_press <span class="ot">&lt;-</span> summary_modell_legpress<span class="sc">$</span>tTable[<span class="st">"timepost"</span>, <span class="st">"Value"</span>]</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>post_se_press <span class="ot">&lt;-</span> summary_modell_legpress<span class="sc">$</span>tTable[<span class="st">"timepost"</span>, <span class="st">"Std.Error"</span>]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Beregn konfidensintervallet for post-estimatet</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>z_value <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="dv">1</span> <span class="sc">-</span> alpha <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>lower_bound_press <span class="ot">&lt;-</span> post_koeff_press <span class="sc">-</span> z_value <span class="sc">*</span> post_se_press</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>upper_bound_press <span class="ot">&lt;-</span> post_koeff_press <span class="sc">+</span> z_value <span class="sc">*</span> post_se_press</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>konfidensintervall_post_press <span class="ot">&lt;-</span> <span class="fu">c</span>(lower_bound_press, upper_bound_press)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>interaksjon_koeff_press <span class="ot">&lt;-</span> summary_modell_legpress<span class="sc">$</span>tTable[<span class="st">"timepost:setssingle"</span>, <span class="st">"Value"</span>]</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>interaksjon_se_press <span class="ot">&lt;-</span> summary_modell_legpress<span class="sc">$</span>tTable[<span class="st">"timepost:setssingle"</span>, <span class="st">"Std.Error"</span>]</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Beregn konfidensintervallet for interaksjonsestimatet</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>lower_bound_interaksjon_press <span class="ot">&lt;-</span> interaksjon_koeff_press <span class="sc">-</span> z_value <span class="sc">*</span> interaksjon_se_press</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>upper_bound_interaksjon_press <span class="ot">&lt;-</span> interaksjon_koeff_press <span class="sc">+</span> z_value <span class="sc">*</span> interaksjon_se_press</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>konfidensintervall_interaksjon_press <span class="ot">&lt;-</span> <span class="fu">c</span>(lower_bound_interaksjon_press, upper_bound_interaksjon_press)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Generelt viser resultatene en økning i muskelstyrke for både leg press og leg extension for alle grupper, og at flere sett gir større økning i muskelstyrke (<a href="#tbl-des-styrke" class="quarto-xref">Table&nbsp;3</a>).For leg extension var den prosentvise økningen i muskelstyrke større for menn enn for kvinner, uavhengig av om de trente med ett eller flere sett. Kvinner som utførte flere sett økte gjennomsnittlig muskelstyrke med cirka 53 %, mens menn som utførte flere sett økte med omtrent 61 %. Tilsvarende var økningen for ett sett 50 % for kvinner og 49 % for menn.</p>
+<p>For leg press var den prosentvise økningen også større for menn enn for kvinner, og forskjellene mellom treningsvolumene var tydeligere. Kvinner som trente med flere sett økte gjennomsnittlig muskelstyrke med omtrent 70 %, mens menn økte med omtrent 48 %. For ett sett var den prosentvise økningen for kvinner cirka 63 %, mens menn økte med omtrent 46 %.</p>
+<div class="cell">
+<div id="tbl-des-styrke" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-des-styrke-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabell&nbsp;3: Deskriptiv data for styrke pre og post
+</figcaption>
+<div aria-describedby="tbl-des-styrke-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
+<div id="kbhbkhhbye" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kbhbkhhbye table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#kbhbkhhbye thead, #kbhbkhhbye tbody, #kbhbkhhbye tfoot, #kbhbkhhbye tr, #kbhbkhhbye td, #kbhbkhhbye th {
+  border-style: none;
+}
+
+#kbhbkhhbye p {
+  margin: 0;
+  padding: 0;
+}
+
+#kbhbkhhbye .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#kbhbkhhbye .gt_title {
+  color: #333333;
+  font-size: medium;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#kbhbkhhbye .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#kbhbkhhbye .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: small;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#kbhbkhhbye .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: small;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#kbhbkhhbye .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#kbhbkhhbye .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#kbhbkhhbye .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#kbhbkhhbye .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#kbhbkhhbye .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#kbhbkhhbye .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#kbhbkhhbye .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#kbhbkhhbye .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#kbhbkhhbye .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#kbhbkhhbye .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kbhbkhhbye .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#kbhbkhhbye .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#kbhbkhhbye .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#kbhbkhhbye .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kbhbkhhbye .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#kbhbkhhbye .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kbhbkhhbye .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#kbhbkhhbye .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kbhbkhhbye .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kbhbkhhbye .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kbhbkhhbye .gt_left {
+  text-align: left;
+}
+
+#kbhbkhhbye .gt_center {
+  text-align: center;
+}
+
+#kbhbkhhbye .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#kbhbkhhbye .gt_font_normal {
+  font-weight: normal;
+}
+
+#kbhbkhhbye .gt_font_bold {
+  font-weight: bold;
+}
+
+#kbhbkhhbye .gt_font_italic {
+  font-style: italic;
+}
+
+#kbhbkhhbye .gt_super {
+  font-size: 65%;
+}
+
+#kbhbkhhbye .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#kbhbkhhbye .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#kbhbkhhbye .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#kbhbkhhbye .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#kbhbkhhbye .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#kbhbkhhbye .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#kbhbkhhbye .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#kbhbkhhbye .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#kbhbkhhbye div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Exercise" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Exercise</th>
+<th id="Sex" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Sex</th>
+<th id="Mean_Load" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Load (kg)</th>
+<th id="SD_Load" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Standard Deviation (kg)</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="4" id="post - multiple" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">post - multiple</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left" headers="post - multiple  Exercise">Leg Extension</td>
+<td class="gt_row gt_left" headers="post - multiple  Sex">female</td>
+<td class="gt_row gt_right" headers="post - multiple  Mean_Load">71.45</td>
+<td class="gt_row gt_right" headers="post - multiple  SD_Load">16.32</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="post - multiple  Exercise">Leg Extension</td>
+<td class="gt_row gt_left" headers="post - multiple  Sex">male</td>
+<td class="gt_row gt_right" headers="post - multiple  Mean_Load">108.91</td>
+<td class="gt_row gt_right" headers="post - multiple  SD_Load">19.02</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="post - multiple  Exercise">Leg Press</td>
+<td class="gt_row gt_left" headers="post - multiple  Sex">female</td>
+<td class="gt_row gt_right" headers="post - multiple  Mean_Load">231.18</td>
+<td class="gt_row gt_right" headers="post - multiple  SD_Load">45.04</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="post - multiple  Exercise">Leg Press</td>
+<td class="gt_row gt_left" headers="post - multiple  Sex">male</td>
+<td class="gt_row gt_right" headers="post - multiple  Mean_Load">292.94</td>
+<td class="gt_row gt_right" headers="post - multiple  SD_Load">70.65</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="4" id="post - single" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">post - single</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_left" headers="post - single  Exercise">Leg Extension</td>
+<td class="gt_row gt_left" headers="post - single  Sex">female</td>
+<td class="gt_row gt_right" headers="post - single  Mean_Load">71.32</td>
+<td class="gt_row gt_right" headers="post - single  SD_Load">14.82</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="post - single  Exercise">Leg Extension</td>
+<td class="gt_row gt_left" headers="post - single  Sex">male</td>
+<td class="gt_row gt_right" headers="post - single  Mean_Load">101.25</td>
+<td class="gt_row gt_right" headers="post - single  SD_Load">14.86</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="post - single  Exercise">Leg Press</td>
+<td class="gt_row gt_left" headers="post - single  Sex">female</td>
+<td class="gt_row gt_right" headers="post - single  Mean_Load">223.75</td>
+<td class="gt_row gt_right" headers="post - single  SD_Load">48.73</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="post - single  Exercise">Leg Press</td>
+<td class="gt_row gt_left" headers="post - single  Sex">male</td>
+<td class="gt_row gt_right" headers="post - single  Mean_Load">280.47</td>
+<td class="gt_row gt_right" headers="post - single  SD_Load">65.58</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="4" id="pre - multiple" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">pre - multiple</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_left" headers="pre - multiple  Exercise">Leg Extension</td>
+<td class="gt_row gt_left" headers="pre - multiple  Sex">female</td>
+<td class="gt_row gt_right" headers="pre - multiple  Mean_Load">46.75</td>
+<td class="gt_row gt_right" headers="pre - multiple  SD_Load">10.79</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="pre - multiple  Exercise">Leg Extension</td>
+<td class="gt_row gt_left" headers="pre - multiple  Sex">male</td>
+<td class="gt_row gt_right" headers="pre - multiple  Mean_Load">67.50</td>
+<td class="gt_row gt_right" headers="pre - multiple  SD_Load">11.76</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="pre - multiple  Exercise">Leg Press</td>
+<td class="gt_row gt_left" headers="pre - multiple  Sex">female</td>
+<td class="gt_row gt_right" headers="pre - multiple  Mean_Load">136.00</td>
+<td class="gt_row gt_right" headers="pre - multiple  SD_Load">38.72</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="pre - multiple  Exercise">Leg Press</td>
+<td class="gt_row gt_left" headers="pre - multiple  Sex">male</td>
+<td class="gt_row gt_right" headers="pre - multiple  Mean_Load">197.37</td>
+<td class="gt_row gt_right" headers="pre - multiple  SD_Load">61.62</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="4" id="pre - single" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">pre - single</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_left" headers="pre - single  Exercise">Leg Extension</td>
+<td class="gt_row gt_left" headers="pre - single  Sex">female</td>
+<td class="gt_row gt_right" headers="pre - single  Mean_Load">47.50</td>
+<td class="gt_row gt_right" headers="pre - single  SD_Load">9.97</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="pre - single  Exercise">Leg Extension</td>
+<td class="gt_row gt_left" headers="pre - single  Sex">male</td>
+<td class="gt_row gt_right" headers="pre - single  Mean_Load">67.63</td>
+<td class="gt_row gt_right" headers="pre - single  SD_Load">10.98</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="pre - single  Exercise">Leg Press</td>
+<td class="gt_row gt_left" headers="pre - single  Sex">female</td>
+<td class="gt_row gt_right" headers="pre - single  Mean_Load">137.50</td>
+<td class="gt_row gt_right" headers="pre - single  SD_Load">35.41</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="pre - single  Exercise">Leg Press</td>
+<td class="gt_row gt_left" headers="pre - single  Sex">male</td>
+<td class="gt_row gt_right" headers="pre - single  Mean_Load">192.50</td>
+<td class="gt_row gt_right" headers="pre - single  SD_Load">58.45</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Gjennomsnittlig muskelstyrke økte over tid for begge øvelsene (<a href="#fig-styrke" class="quarto-xref">Figure&nbsp;2</a>). Modellresultatene (lme-modellen) viser at økningen fra baseline (pre) til hver påfølgende tid (økt 1, uke 2, uke 5, uke 9 og post) var statistisk signifikant (p &lt; 0.05). Når det gjelder endringene fra pre til post for de to øvelsene, ble det estimert at legpress økte med 33.09 kg (SE = 1.54 kg, 95% konfidensintervall (KI): [30.07, 36.11]). Mens med leg press, ble det estimert at muskelstyrken økte med 95.33 kg (SE 4.16 , 95% konfidensintervall (KI): [87.18, 103.48]).</p>
+<p>Når vi ser på om volumforholdene (ett sett vs.&nbsp;flere sett) hadde noen effekt på muskelstyrken, viser konfidensintervallene for leg extension at forskjellen mellom ett sett og flere sett var mellom 30.07 kg og 36.11 kg. Tilsvarende var konfidensintervallet for leg press mellom 87.18 kg og 103.48 kg. Begge disse konfidensintervallene inkluderer null, noe som indikerer at det ikke var noen statistisk signifikant forskjell mellom ett sett og flere sett for endringen i muskelstyrke, verken for leg extension eller leg press. Dette tyder på at begge treningsvolumene hadde lignende effekt på muskelstyrken.</p>
 <div id="fig-styrke" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-styrke-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Assignment5_files/figure-html/fig-styrke-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-styrke-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figur&nbsp;2: Utvikling i muskelstyrke for leg press og leg extension
+Figur&nbsp;2: Utvikling i muskelstyrke for leg press og leg extension.
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
+</section>
+<section id="endring-i-muskeltverssnitt" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="endring-i-muskeltverssnitt"><span class="header-section-number">3.2</span> Endring i muskeltverssnitt</h2>
+<p>Resultatene viste en signifikant økning i muskelens tverrsnittsareal etter treningsperioden (<a href="#tbl-muskeltverr" class="quarto-xref">Table&nbsp;4</a>). Den estimerte koeffisienten for post-testen var 289.88 g (SE = 55.05), med et 95 % konfidensintervall fra 181.99 til 397.76. Dette indikerer at deltakerne i gjennomsnitt økte muskelens tverrsnittsareal med 289,88 gram etter intervensjonen.</p>
+<p>Analysen av effekten av treningsvolum på muskelens tverrsnittsareal viste at interaksjonen mellom tid og antall sett ikke var signifikant (estimat = -118.17, SE = 77.37, 95&nbsp;% KI [-269.82, 33.48], p = 0,13). Dette indikerer at det ikke var en statistisk signifikant forskjell (p &gt; 0,05) i økningen av muskelens tverrsnittsareal mellom deltakerne som utførte ett sett og de som utførte tre sett. Selv om estimatet var negativt, tyder det på at økt treningsvolum ikke nødvendigvis førte til en større økning i muskelens tverrsnittsareal i denne studien.</p>
 <div class="cell">
 <div id="tbl-muskeltverr" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-muskeltverr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabell&nbsp;2: Oppsummering av muskeltverrsnitt før og etter intervensjon (kombinert for kjønn, kun pre og post)
+Tabell&nbsp;4: Oppsummering av muskeltverrsnitt før og etter intervensjon (kombinert for kjønn, kun pre og post)
 </figcaption>
 <div aria-describedby="tbl-muskeltverr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -356,12 +1562,29 @@ Tabell&nbsp;2: Oppsummering av muskeltverrsnitt før og etter intervensjon (komb
 </div>
 </div>
 </section>
-<section id="diskusjon" class="level1 unnumbered" data-number="4">
-
+</section>
+<section id="diskusjon" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Diskusjon</h1>
+<p>Denne studien undersøkte effekten av to ulike treningsvolum, ett sett versus tre sett, på muskelstyrke og muskeltverrsnittsareal. Resultatene viste en signifikant økning i både muskelstyrke og muskeltverrsnittsareal etter treningsperioden for begge gruppene. Imidlertid var det ingen statistisk signifikante forskjeller mellom gruppene som utførte ett sett og de som utførte tre sett, verken for muskelstyrke eller muskelhypertrofi. De diagnostiske analysene bekreftet at modellforutsetningene var rimelig oppfylt, noe som gir tillit til validiteten av funnene våre. Ingen betydelige avvik ble observert i residualene, og modellene ble derfor ansett som passende for dataene.</p>
+<p>Disse funnene utfordrer den etablerte oppfatningen om at et høyere treningsvolum alltid fører til større muskeltilpasninger. Tidligere forskning har ofte indikert et dose-respons-forhold mellom treningsvolum og muskelvekst, hvor økt volum er assosiert med større hypertrofi og styrkeøkninger (<span class="citation" data-cites="schoenfeld2016">Schoenfeld et al. (<a href="#ref-schoenfeld2016" role="doc-biblioref">2016</a>)</span>; <span class="citation" data-cites="currier2023">Currier et al. (<a href="#ref-currier2023" role="doc-biblioref">2023</a>)</span>). For eksempel fant Schoenfeld et al.&nbsp;(2016) at flere sett per øvelse var mer effektive for muskelhypertrofi enn ett sett. På den annen side har noen studier ikke funnet signifikante forskjeller mellom ulike treningsvolum, spesielt når treningsintensiteten er kontrollert (<span class="citation" data-cites="ralston2017">Ralston et al. (<a href="#ref-ralston2017" role="doc-biblioref">2017</a>)</span>).</p>
+<p>En mulig forklaring på våre funn er at begge treningsvolumene var tilstrekkelige for å fremkalle maksimale adaptasjoner innenfor den gitte treningsperioden. Det kan være en terskelverdi for hvor mye volum som er nødvendig for å stimulere muskelvekst og styrke, og at denne terskelen ble nådd med ett sett i vår studie. Dette er også sett i forskning som antyder at selv lave til moderate treningsvolumer kan være effektive for muskelhypertrofi hos utrente individer (<span class="citation" data-cites="Krieger2010">Krieger (<a href="#ref-Krieger2010" role="doc-biblioref">2010</a>)</span>; <span class="citation" data-cites="Schoenfeld2019">Schoenfeld et al. (<a href="#ref-Schoenfeld2019" role="doc-biblioref">2019</a>)</span>).</p>
+<p>Når det gjelder muskelstyrke, viste begge gruppene betydelige forbedringer uten signifikante forskjeller mellom volumene. Dette kan skyldes at styrkeøkninger i stor grad påvirkes av nevromuskulære tilpasninger, spesielt i de tidlige stadiene av treningsintervensjoner (<span class="citation" data-cites="Folland2007">Folland &amp; Williams (<a href="#ref-Folland2007" role="doc-biblioref">2007</a>)</span>). Det er mulig at den relativt korte treningsperioden i vår studie ikke var tilstrekkelig for å avdekke forskjeller i styrkeøkninger basert på treningsvolum.</p>
+<section id="begrensninger" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="begrensninger"><span class="header-section-number">4.1</span> Begrensninger</h2>
+<p>Flere begrensninger bør tas i betraktning. For det første var utvalgsstørrelsen begrenset, noe som kan ha redusert studiens statistiske styrke til å oppdage mindre forskjeller mellom gruppene. Selv om forhåndsberegningen av utvalgsstørrelse indikerte tilstrekkelig kraft, kan individuelle variasjoner ha påvirket resultatene. For det andre var treningsperioden relativt kort, og lengre intervensjoner kan være nødvendig for å observere de fulle effektene av ulikt treningsvolum på muskelhypertrofi og styrke. I tillegg ble ikke faktorer som kosthold, søvn og daglige aktiviteter kontrollert, noe som kan ha påvirket muskeltilpasningene.</p>
+</section>
+<section id="implikasjoner-for-fremtidig-forskning" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="implikasjoner-for-fremtidig-forskning"><span class="header-section-number">4.2</span> Implikasjoner for fremtidig forskning</h2>
+<p>Fremtidige studier bør vurdere å inkludere større og mer varierte utvalg, samt lengre treningsperioder, for å bedre forstå effekten av treningsvolum på muskeltilpasninger. Det kan også være verdifullt å undersøke hvordan ulike populasjoner, som erfarne idrettsutøvere versus nybegynnere, responderer på forskjellige treningsvolum. Videre bør fremtidig forskning ta hensyn til andre treningsvariabler som intensitet, frekvens og type øvelser for å gi en mer helhetlig forståelse av optimal treningsdesign.</p>
+</section>
+<section id="konklusjon" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="konklusjon"><span class="header-section-number">4.3</span> Konklusjon</h2>
+<p>Resultatene fra denne studien indikerer at både ett sett og tre sett med styrketrening fører til signifikante økninger i muskelstyrke og muskeltverrsnittsareal hos voksne individer. Mangelen på signifikante forskjeller mellom de to treningsvolumene antyder at et lavere volum kan være like effektivt som et høyere volum for å fremme muskelstyrke og hypertrofi i en kortere treningsperiode. Disse funnene har praktiske implikasjoner for treningsprogrammering, spesielt for individer med begrenset tid til trening. Likevel er det behov for ytterligere forskning for å bekrefte disse resultatene og for å utforske de langsiktige effektene av treningsvolum på muskeltilpasninger.</p>
 
 </section>
+</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">4 Diskusjon</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-bompa2019" class="csl-entry" role="listitem">
 Bompa, T. O., &amp; Buzzichelli, C. (2019). <em>Periodization: Theory and methodology of training</em> (6th ed.). Human Kinetics.
 </div>
@@ -371,8 +1594,14 @@ Coffey, V. G., &amp; Hawley, J. A. (2007). The molecular bases of training adapt
 <div id="ref-currier2023" class="csl-entry" role="listitem">
 Currier, B. S., Mcleod, J. C., Banfield, L., Beyene, J., Welton, N. J., D’Souza, A. C., Keogh, J. A. J., Lin, L., Coletta, G., Yang, A., Colenso-Semple, L., Lau, K. J., Verboom, A., &amp; Phillips, S. M. (2023). Resistance training prescription for muscle strength and hypertrophy in healthy adults: A systematic review and bayesian network meta-analysis. <em>British Journal of Sports Medicine</em>, <em>57</em>(18), 1211–1220. <a href="https://doi.org/10.1136/bjsports-2023-106807">https://doi.org/10.1136/bjsports-2023-106807</a>
 </div>
+<div id="ref-Folland2007" class="csl-entry" role="listitem">
+Folland, J. P., &amp; Williams, A. G. (2007). The adaptations to strength training: Morphological and neurological contributions to increased strength. <em>Sports Medicine</em>, <em>37</em>(2), 145–168. <a href="https://doi.org/10.2165/00007256-200737020-00004">https://doi.org/10.2165/00007256-200737020-00004</a>
+</div>
 <div id="ref-izquierdo2004" class="csl-entry" role="listitem">
 Izquierdo, M., Ibáñez, J., Häkkinen, K., Kraemer, W. J., Ruesta, M., &amp; Gorostiaga, E. M. (2004). Maximal strength and power, muscle mass, endurance and serum hormones in weightlifters and road cyclists. <em>Journal of Sports Sciences</em>, <em>22</em>(5), 465–478. <a href="https://doi.org/10.1080/02640410410001675342">https://doi.org/10.1080/02640410410001675342</a>
+</div>
+<div id="ref-Krieger2010" class="csl-entry" role="listitem">
+Krieger, J. W. (2010). Single vs. Multiple sets of resistance exercise for muscle hypertrophy: A meta-analysis. <em>Journal of Strength and Conditioning Research</em>, <em>24</em>(4), 1150–1159. <a href="https://doi.org/10.1519/JSC.0b013e3181d4d436">https://doi.org/10.1519/JSC.0b013e3181d4d436</a>
 </div>
 <div id="ref-RCoreTeam2018" class="csl-entry" role="listitem">
 R Core Team. (2018). <em>R: A language and environment for statistical computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>
@@ -385,6 +1614,9 @@ Ralston, G. W., Kilgore, L., Wyatt, F. B., &amp; Baker, J. S. (2017). The effect
 </div>
 <div id="ref-ruiz2008" class="csl-entry" role="listitem">
 Ruiz, J. R., Sui, X., Lobelo, F., Morrow, J. R., Jackson, A. W., Sjöström, M., &amp; Blair, S. N. (2008). Association between muscular strength and mortality in men: Prospective cohort study. <em>BMJ: British Medical Journal</em>, <em>337</em>(7661), 92–95. <a href="http://www.jstor.org/stable/20510282">http://www.jstor.org/stable/20510282</a>
+</div>
+<div id="ref-Schoenfeld2019" class="csl-entry" role="listitem">
+Schoenfeld, B. J., Grgic, J., Ogborn, D., &amp; Krieger, J. W. (2019). Effects of low-vs. High-load resistance training on muscle strength and hypertrophy in well-trained men. <em>Journal of Strength and Conditioning Research</em>, <em>33</em>(S1), S1–S10. <a href="https://doi.org/10.1519/JSC.0000000000002468">https://doi.org/10.1519/JSC.0000000000002468</a>
 </div>
 <div id="ref-schoenfeld2016" class="csl-entry" role="listitem">
 Schoenfeld, B. J., Ogborn, D., &amp; Krieger, J. W. (2016). Dose-response relationship between weekly resistance training volume and increases in muscle mass: A systematic review and meta-analysis. <em>Journal of Sports Sciences</em>, <em>35</em>(11), 1073–1082. <a href="https://doi.org/10.1080/02640414.2016.1210197">https://doi.org/10.1080/02640414.2016.1210197</a>

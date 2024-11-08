@@ -17,37 +17,17 @@ csl: resources/apa.csl
 
 # Introduksjon
 
-Avsnitt 1:
-
-Treningsadaptasjon er en av de mest grunnleggende søylene i treningsvitenskapen, som sier at kroppen vår kan tilpasse seg den belastningen den utsettes for, gitt at den får nok tid til å tilpasse seg den nye belastningen (@bompa2019, s. 8). Spesielt skjelettmuskulaturen har vist seg å være et høgts tilpasningsdyktig vev som kan endre sin egen arkitektur som respons på en gitt stimuli (@coffey2007). Resultatene på disse tilpasningene er påvirket av volumet, intensiteten og frekvensen av treningen, i tillegg vil tilpasningene avhengig av den spesifikke belastningen kroppen og muskulaturen utsettes for, for eksempel treningsmetode (@bompa2019, s.3; @Raastad2010, s.17;@coffey2007;@izquierdo2004).
+Treningsadaptasjon er en av de mest grunnleggende søylene i treningsvitenskapen, som sier at kroppen vår kan tilpasse seg den belastningen den utsettes for, gitt at den får nok tid til å tilpasse seg den nye belastningen (@bompa2019, s. 8). Spesielt skjelettmuskulaturen har vist seg å være et høgts tilpasningsdyktig vev som kan endre sin egen arkitektur som respons på en gitt stimuli (@coffey2007). Resultatene på disse tilpasningene er påvirket av volumet, intensiteten og frekvensen av treningen, i tillegg vil tilpasningene avhengig av den spesifikke belastningen kroppen og muskulaturen utsettes for, for eksempel treningsmetode (@bompa2019, s.3; @Raastad2010, s.17; @coffey2007; @izquierdo2004).
 
 Styrketrening har vist seg å være avgjørende, ikke bare for idrettsprestasjoner (@washif2022), men også for folkehelse og redusert dødelighet (@ruiz2008). Denne treningsformen omfatter aktiviteter som utvikler eller opprettholder vår evne til å generer maksimal kraft eller dreiemoment ved en spesifikk hastighet (@Raastad2010, s.17). Trening for maksimal muskelstyrke, der målet er å øke den høyeste kraften en muskel kan produsere (målt som en repetisjon maksimum) (@Raastad2010, s.13), skiller seg fra trening med hensikt om muskelvekst (hypertrofi), hvor fokus ligger på å øke muskelens størrelse (@schoenfeld2016). Flere studier har undersøkt hvilket treningsvolum som best stimulerer slike tilpasninger og har identifisert et dose-respons-forhold, hvor økt treningsvolum er assosiert med større muskelvekst (@currier2023; @schoenfeld2016). Et lignende forhold er også blitt observert for muskelstyrke (@ralston2017), selv om det er også foreslått at et høgt treningsvolum kan bremse utviklingen av maksimal muskelstyrke (@zhang2023). Muskelens tverrsnitt er en sentral faktor å ta med, da et større tverrsnitt vil gi et større potensiale for kraftutvikling (@Raastad2010, s.20). Dette understreker behovet for videre undersøkelser av hvordan treningsvolum påvirker både muskelhypertrofi og styrkeutvikling, samt i hvilken grad endringer i muskelmasse er sammenfallende med økninger i styrke.
 
-På bakgrunn av tidligere forskning og den noe usikre dose-respons-sammenhengen mellom optimal treningsvolum og muskeltilpasninger, er formålet med denne studien å undersøke hvordan ulike nivåer av treningsvolum påvirker både muskelvekst og muskelstyrke. Ettersom at skjelettmuskulaturen er svært tilpasningsdyktig på den stimulien den utsettes for, ønsker studien også å undersøke om større endringer i muskelvekst følger sammen med tilsvarende endringer i muskelstyrke ved høyere treningsvolum. Ved å utforske denne sammenhengen håper man å kunne bidra med økt innsikt som kan være nyttig ved anbefalinger om optimalt treningsvolum.
-
--   Introdusere leseren for kva som skal bli undersøkt. Sentrale punkter å få med er:
-    -   Hensikten med trening generelt, og knytt det opp mot styrketrening - kva er dette? For inspirasjon se eksamensoppgåve i styrkefaget.
-    -   Forholdet mellom økt lean body mass og styrketrening (dose-respons forholdet)- tett knyttet til hverandre, samtidig som det ses en diskrepans når man sammenligner dose-respons forholdet på lean body mass og muskelstyrke.
-
-Avsnitt 2:
-
--   Benytt dette avsnittet til å forklare mer i detalj mekanismene bak økning i lean body mass og muskelstyrke. Sentrale definisjoner å få inn vil være
-    -   Lean body mass
-    -   Muskelstyrke, maksimal styrke
-    -   Hva er det som er med å bestemme muskelstyrken vår (se Raastad for inspirasjon)
-    -   Dose-respons forholdet
-    -   Treningsvolum
-    -   Kan være fint å få inn intensitet og grad av anstrengelse
-
-Avsnitt 3:
-
--   Mange som argumenterer for at tverrsnitsarealet av muskulatur er den viktigaste faktoren for vår maksimale styrke. Utfordrer derfor dette synet, og ønsker å se på om økning i muskelmasse kan være et godt mål på økning i muskelstyrke.
+På bakgrunn av tidligere forskning og den noe usikre dose-respons-sammenhengen mellom optimal treningsvolum og muskeltilpasninger, er formålet med denne studien å undersøke hvordan ulike nivåer av treningsvolum påvirker både muskelvekst og muskelstyrke, ettersom  skjelettmuskulaturen er svært tilpasningsdyktig på den stimulien den utsettes for. Ved å utforske denne sammenhengen håper man å kunne bidra med økt innsikt som kan være nyttig ved anbefalinger om optimalt treningsvolum.
 
 # Metode
 
 ## Deltagere og studieoversikt
 
-Totalt ble førti-en menn og kvinner inkludert i studien, der inklusjonskriterene var at de ikke var røykere og var mellom 18 og 40 år. Klare eksklusjonskriterer som redusert muskelstyrke grunnet tidligere eller nåværende skader, har hatt mer en en ukentlig styrketrenings økt de siste 12 månedene fra inklusjonsdato, intoleranse for lokal bedøvelse, samt bruk av medikamenter som kan påvirke treningsadaptasjoner. Syv deltakere ble ekskludert fra data analysen, fordi de ikke hadde gjennomført minimum 85% av de oppsatte treningene grunnet årsaker som: ubehag eller smerter i underekstremitetene under trening (*n = 5*), skade påført utenom studieprotokollen (*n = 1*), eller manglende overholdelse av studiedesignet (*n = 1*). *Det var ingen forskjeller i antropometriske data og maksimal frivillig kontraksjon (MFK) normalisert for kroppsvekt, mellom de inkluderte og ekskluderte deltagerne ved baseline, se @tbl-antro. Selv om ingen av de inkluderte deltakerne utførte mer en 1 ukentlig styrkeøkt, var det tjue deltakere som rapporterte at de var fysisk aktive ved inklusjon (median på 2 økter i uken, med en range på 0.5-4). Alle de inkluderte hadde tidligere treningserfaringer med ulike idretter, som for eksempel lagidretter, skiskytting etc...).* **Eg er usikker på om eg kan ha med denne dataen, siden den ikkje kan vises til i datasettet**.
+Totalt ble førti-en menn og kvinner inkludert i studien, der inklusjonskriterene var at de ikke var røykere og var mellom 18 og 40 år. Klare eksklusjonskriterer som redusert muskelstyrke grunnet tidligere eller nåværende skader, har hatt mer en en ukentlig styrketrenings økt de siste 12 månedene fra inklusjonsdato, intoleranse for lokal bedøvelse, samt bruk av medikamenter som kan påvirke treningsadaptasjoner. Syv deltakere ble ekskludert fra data analysen, fordi de ikke hadde gjennomført minimum 85% av de oppsatte treningene grunnet årsaker som: ubehag eller smerter i underekstremitetene under trening (*n = 5*), skade påført utenom studieprotokollen (*n = 1*), eller manglende overholdelse av studiedesignet (*n = 1*). Selv om ingen av de inkluderte deltakerne utførte mer en 1 ukentlig styrkeøkt, var det tjue deltakere som rapporterte at de var fysisk aktive ved inklusjon (median på 2 økter i uken, med en range på 0.5-4). Alle de inkluderte hadde tidligere treningserfaringer med ulike idretter, som for eksempel lagidretter, skiskytting etc...).
 
 ```{r}
 #| echo: false
@@ -137,9 +117,9 @@ De ulike søylene illustrer treningsfrekvens per uke med en treningsintensitet l
 
 ## Styrketreningsprotokoll
 
-Det ble laget en standardisert oppvarming som deltakerne skulle gjennomføre før de begynte med styrketreningen. Oppvarmingen begynte med 5 minutter på ergometer sykkel, der de skulle holde 12-14 på gjennomgått grad av anstrengelse (RPE, se bilde under). Etter syklingen skulle de gjennomføre 10 repetisjoner av push-ups (tilpasset vanskelighetsgrad basert på vinkel), sit-ups, knebøy og rygghev, etterfulgt av et sett med 10 repetisjoner av hver styrkeøvelse med en motstand tilsvarende rundt 50% av deres repetisjons maksimum (1RM).
+Det ble laget en standardisert oppvarming som deltakerne skulle gjennomføre før de begynte med styrketreningen. Oppvarmingen begynte med 5 minutter på ergometer sykkel, der de skulle holde 12-14 på gjennomgått grad av anstrengelse (RPE). Etter syklingen skulle de gjennomføre 10 repetisjoner av push-ups (tilpasset vanskelighetsgrad basert på vinkel), sit-ups, knebøy og rygghev, etterfulgt av et sett med 10 repetisjoner av hver styrkeøvelse med en motstand tilsvarende rundt 50% av deres repetisjons maksimum (1RM).
 
-Styrketreningen inneholdt en del for beina og en for overkroppen. For beina skulle det gjennomføres unilateral beinpress, knefleksjon og knestrekk, i den nevnte rekkefølgen. Avhengig av gruppen deltakerne ble tildelt til, ble hver øvelse enten utført med ett sett eller tre sett. Beinet som ble tildelt ett-setts protokollen gjennomførte arbeidet sitt mellom det andre og tredje settet til benet som skulle gjennomføre tre sett. Pausene mellom settene skulle vare mellom 90-180 sekunder. Etter beinøvelsene hadde blitt fullført, skulle deltakerne gjøre to sett av bilateral benkpress, nedtrekk og enten skulderpress eller sittende roinger som ble gjort i hver sin økt. Som man kan se fra @fig-trening, så ble treningsintensiteten gradvis økt fra 10RM to første ukene hadde 10RM, til 8RM de påfølgende tre ukene og 7RM de siste syv ukene. Etter den niende treningsøkten hadde hver uke som inneholdt tre økter i uken, en økt med lavere motstand, men der man beholdt samme antall repetisjoner (motstanden tilsvarte 90% av økten før). Øktene med maksimal innsats skulle ikke gjentas før det var gått 48 timer, mens det trengte kun å gå 24 timer mellom ny økt og øktene med redusert motstand. For å fasiletere til restitusjon, ble det gitt en standardisert drikk med 0.15 g kg$^{-1}$ protein, 11.2g kg$^{-1}$ karbohydrater og 0.5 g kg$^{-1}$ fett, etter hver treningsøkt. For å sikre bærekraftighet av treningsprotokollen, ble det lagt opp til at noen av øktene kunne gjennomføres uten tilsyn. For å sikre progresjon og etterlevelse, ble deltakerne instruert til å føre deltaljerte loggbøker for de øktene som ble utført uten tilsyn, slik at forskerteamet kunne i samarbeid med deltakerne gå gjennom øktene. Av alle øktene, ble i gjennomsnitt 91% (SD = 10%, range 67-100%) av øktene gjennomført med tilsyn.
+Styrketreningen inneholdt en del for beina og en for overkroppen. For beina skulle det gjennomføres unilateral beinpress, knefleksjon og knestrekk, i den nevnte rekkefølgen. Avhengig av gruppen deltakerne ble tildelt til, ble hver øvelse enten utført med ett sett eller tre sett. Beinet som ble tildelt ett-setts protokollen gjennomførte arbeidet sitt mellom det andre og tredje settet til benet som skulle gjennomføre tre sett. Pausene mellom settene skulle vare mellom 90-180 sekunder. Etter beinøvelsene hadde blitt fullført, skulle deltakerne gjøre to sett av bilateral benkpress, nedtrekk og enten skulderpress eller sittende roinger som ble gjort i hver sin økt. Som man kan se fra @fig-trening, så ble treningsintensiteten gradvis økt fra 10RM to første ukene hadde 10RM, til 8RM de påfølgende tre ukene og 7RM de siste syv ukene. Etter den niende treningsøkten hadde hver uke som inneholdt tre økter i uken, en økt med lavere motstand, men der man beholdt samme antall repetisjoner (motstanden tilsvarte 90% av økten før). Øktene med maksimal innsats skulle ikke gjentas før det var gått 48 timer, mens det trengte kun å gå 24 timer mellom ny økt og øktene med redusert motstand. For å fasiletere til restitusjon, ble det gitt en standardisert drikk med 0.15 g kg$^{-1}$ protein, 11.2g kg$^{-1}$ karbohydrater og 0.5 g kg$^{-1}$ fett, etter hver treningsøkt. For å sikre bærekraftighet av treningsprotokollen, ble det lagt opp til at noen av øktene kunne gjennomføres uten tilsyn. For å sikre progresjon og etterlevelse, ble deltakerne instruert til å føre deltaljerte loggbøker for de øktene som ble utført uten tilsyn, slik at forskerteamet kunne i samarbeid med deltakerne gå gjennom øktene. 
 
 ## Målinger av maksimal muskelstyrke og muskelens tverrsnittsareal
 
@@ -149,20 +129,651 @@ Ved hjelp av magnetisk resonans bildefremstilling (MR), målte man deltagernes q
 
 ## Data analyse og statistikk
 
--   Data analysis and statistics: Describe how you treated the data prior to statistical tests or procedures and what tests/procedures were used to draw inference (or more generally, to answer your purpose). Describe how you present data (e.g. descriptive data with mean (SD), inference with confidence intervals etc.).
-
 Med mindre noe annet er spesifisert, er alle deskriptive data presentert som gjennomsnitt og standardavvik. Før studien ble det gjort en forhåndsberegning av utvalgsstørrelse, som viste at 40 deltakere ville være tilstrekkelig for å kunne oppdage forskjeller på omtrent 3 og 5 prosentpoeng for henholdsvis muskeltverrsnittsareal og maksimal styrke mellom de ulike volumforholdene, med en ønsket statistisk styrke på 80%. Denne beregningen er basert på data fra tidligere studier, som antar at forskjellene mellom volumforholdene tilsvarer en effektstørrelse på mellom 0,19 og 0,24 (@ralston2017; @schoenfeld2016).
 
-For å undersøke hvordan de ulike volumforholdene påvirket muskelvekst og styrke, ble det benyttet lineære blandede modeller (LLM). De relative endringene fra baseline ble satt som den avhengige variabelen, med antall sett som den uavhengige variabelen. For å vurdere om større muskelvekst også gir tilsvarende endringer i muskelstyrke, ble en interaksjonseffekt mellom treningsvolum og endring i muskeltverrsnitt inkludert. Ved å inkludere denne interaksjonseffekten kan modellen fange opp eventuelle forskjeller i effekten av muskelvekst på muskelstyrke under ulike treningsvolum. Baseline-verdier og kjønn ble brukt som kovariater for å kontrollere for deres potensielle effekt på muskelvekst og styrke.
+For å undersøke hvordan de ulike volumforholdene påvirket muskelvekst og styrke, ble det benyttet lineære blandede modeller (LLM). De relative endringene fra baseline ble satt som den avhengige variabelen, med antall sett som den uavhengige variabelen. For å vurdere om større muskelvekst også gir tilsvarende endringer i muskelstyrke, ble en interaksjonseffekt mellom treningsvolum og endring i muskeltverrsnitt inkludert. Ved å inkludere denne interaksjonseffekten kan modellen fange opp eventuelle forskjeller i effekten av muskelvekst på muskelstyrke under ulike treningsvolum. Baseline-verdier og kjønn ble brukt som kovariater for å kontrollere for deres potensielle effekt på muskelvekst og styrke. 
+
+For å evaluere om de statistiske modellene oppfylte forutsetningene for lineære blandede modeller, ble diagnostiske plot undersøkt. Q-Q plot ble brukt for å vurdere normaliteten til residualene, residualer mot predikerte verdier for å sjekke for homoskedastisitet, og histogram av residualer for å identifisere eventuelle skjevheter eller avvik.
 
 Resultater med et signifikansnivå på $\alpha = 0.05$ ble ansett som statistisk signifikante. Analysen av dataene ble gjort i R (@RCoreTeam2018).
 
-# Resulater
+# Resultater
+
 
 ```{r}
 #| echo: false
+#| fig.show: "hide"
+#| message: false
+#| warning: false
+#| fig.cap: "Diagnostiske plot for modellen av muskeltverrsnittsareal."
+
+# Last inn nødvendige pakker
+library(exscidata)
+library(tidyverse)
+library(nlme)
+library(ggplot2)
+library(gridExtra)
+data("dxadata")
+
+# Forbered dataene
+muskeltverr <- dxadata %>%
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(
+    names_to = "leg",
+    values_to = "lean.mass",
+    cols = lean.left_leg:lean.right_leg
+  ) %>%
+  mutate(
+    leg = if_else(leg == "lean.left_leg", "L", "R"),
+    sets = if_else(multiple == leg, "multiple", "single"),
+    time = factor(time, levels = c("pre", "post"))
+  ) %>%
+  select(participant, time, sex, include, sets, leg, lean.mass)
+
+# Bygg modellen
+model_muskel <- lme(
+  fixed = lean.mass ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = muskeltverr,
+  na.action = na.omit
+)
+
+# Undertrykk output av modelloppsummering
+summary_modmuskel <- summary(model_muskel)
+
+# Ekstraher residualer og predikerte verdier
+residuals_muskeltverr <- residuals(model_muskel)
+fitted_values_muskeltverr <- fitted(model_muskel)
+
+# Lag plottene
+# 1. Q-Q plot
+qq_plot_muskeltverr <- ggplot(data = data.frame(sample = residuals_muskeltverr), aes(sample = sample)) +
+  stat_qq() +
+  stat_qq_line(col = "red") +
+  ggtitle("Q-Q Plot") +
+  theme_minimal()
+
+# 2. Residualer vs. Predikerte Verdier
+residuals_plot_muskeltverr <- ggplot(data = data.frame(fitted = fitted_values_muskeltverr, residuals = residuals_muskeltverr),
+                                     aes(x = fitted, y = residuals)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  ggtitle("Residualer vs. Predikerte Verdier") +
+  xlab("Predikerte Verdier") +
+  ylab("Residualer") +
+  theme_minimal()
+
+# 3. Histogram av Residualer
+hist_plot_muskeltverr <- ggplot(data = data.frame(residuals = residuals_muskeltverr), aes(x = residuals)) +
+  geom_histogram(bins = 20, fill = "blue", color = "black") +
+  ggtitle("Histogram av Residualer") +
+  xlab("Residualer") +
+  ylab("Frekvens") +
+  theme_minimal()
+
+# Kombiner plottene
+grid.arrange(qq_plot_muskeltverr, residuals_plot_muskeltverr, hist_plot_muskeltverr, nrow = 2)
+
+```
+
+```{r}
+#| echo: false
+#| fig.show: "hide"
+#| message: false
+#| warning: false
+#| fig.cap: "Diagnostiske plot for modellen av maksimal styrke i leg press."
+
+# Last inn nødvendige pakker
+library(exscidata)
+library(tidyverse)
+library(nlme)
+library(ggplot2)
+library(gridExtra)
+library(grid)
+data("strengthvolume"); data("dxadata")
+
+# Forbered dataene
+strengthvolume_legpress <- strengthvolume %>%
+  filter(exercise == "legpress") %>%
+  mutate(time = factor(time, levels = c("pre", "session1", "week2", "week5", "week9", "post")))
+
+# Bygg modellen
+model_legpress <- lme(
+  fixed = load ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = strengthvolume_legpress,
+  na.action = na.omit
+)
+
+# Undertrykk output av modelloppsummering
+summary_modlegpress <- summary(model_legpress)
+
+# Ekstraher residualer og predikerte verdier
+residuals_legpress <- residuals(model_legpress)
+fitted_values_legpress <- fitted(model_legpress)
+
+# Lag plottene
+# 1. Q-Q plot
+qq_plot_legpress <- ggplot(data = data.frame(sample = residuals_legpress), aes(sample = sample)) +
+  stat_qq() +
+  stat_qq_line(col = "red") +
+  ggtitle("Q-Q Plot") +
+  theme_minimal()
+
+# 2. Residualer vs. Predikerte Verdier
+residuals_plot_legpress <- ggplot(data = data.frame(fitted = fitted_values_legpress, residuals = residuals_legpress),
+                                  aes(x = fitted, y = residuals)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  ggtitle("Residualer vs. Predikerte Verdier") +
+  xlab("Predikerte Verdier") +
+  ylab("Residualer") +
+  theme_minimal()
+
+# 3. Histogram av Residualer
+hist_plot_legpress <- ggplot(data = data.frame(residuals = residuals_legpress), aes(x = residuals)) +
+  geom_histogram(bins = 20, fill = "blue", color = "black") +
+  ggtitle("Histogram av Residualer") +
+  xlab("Residualer") +
+  ylab("Frekvens") +
+  theme_minimal()
+
+# Kombiner plottene
+grid.arrange(qq_plot_legpress, residuals_plot_legpress, hist_plot_legpress, nrow = 2)
+
+```
+
+```{r}
+#| echo: false
+#| fig.show: "hide"
+#| message: false
+#| warning: false
+#| fig.cap: "Diagnostiske plot for modellen av maksimal styrke i leg-extension."
+
+# Last inn nødvendige pakker
+library(exscidata)
+library(tidyverse)
+library(nlme)
+library(ggplot2)
+library(gridExtra)
+data("strengthvolume"); data("dxadata")
+
+# Forbered dataene
+strengthvolume_legext <- strengthvolume %>%
+  filter(exercise == "legext") %>%
+  mutate(time = factor(time, levels = c("pre", "session1", "week2", "week5", "week9", "post")))
+
+# Bygg modellen
+model_legext <- lme(
+  fixed = load ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = strengthvolume_legext,
+  na.action = na.omit
+)
+
+# Undertrykk output av modelloppsummering
+summary_modlegext <- summary(model_legext)
+
+# Ekstraher residualer og predikerte verdier
+residuals_legext <- residuals(model_legext)
+fitted_values_legext <- fitted(model_legext)
+
+# Lag plottene
+# 1. Q-Q plot
+qq_plot <- ggplot(data = data.frame(residuals = residuals_legext), aes(sample = residuals)) +
+  stat_qq() +
+  stat_qq_line(color = "red") +
+  ggtitle("Q-Q Plot") +
+  theme_minimal()
+
+# 2. Residualer vs. Predikerte Verdier
+resid_fitted_plot <- ggplot(data = data.frame(fitted = fitted_values_legext, residuals = residuals_legext),
+  aes(x = fitted, y = residuals)) +
+  geom_point() +
+  geom_hline(yintercept = 0, color = "red", linetype = "dashed") +
+  ggtitle("Residualer vs. Predikerte Verdier") +
+  xlab("Predikerte Verdier") +
+  ylab("Residualer") +
+  theme_minimal()
+
+# 3. Histogram av Residualer
+hist_plot <- ggplot(data = data.frame(residuals = residuals_legext), aes(x = residuals)) +
+  geom_histogram(bins = 20, fill = "blue", color = "black") +
+  ggtitle("Histogram av Residualer") +
+  xlab("Residualer") +
+  ylab("Frekvens") +
+  theme_minimal()
+
+# Arranger plottene
+grid.arrange(qq_plot, resid_fitted_plot, hist_plot, nrow = 2)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'asis'
+
+# Last inn nødvendige pakker
+library(exscidata)
+library(tidyverse)
+library(nlme)
+data("strengthvolume")
+
+# Filtrer datasettet for leg extension-øvelsen og sett 'time' som en faktor med ønsket rekkefølge
+strengthvolume_legext <- strengthvolume %>%
+  filter(exercise == "legext") %>%
+  mutate(time = factor(time, levels = c("pre", "session1", "week2", "week5", "week9", "post")))
+
+# Modell for muskelstyrke i leg extension-øvelsen uten manglende verdier
+model_legext <- lme(
+  fixed = load ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = strengthvolume_legext,  # Bruker det oppdaterte datasettet
+  na.action = na.omit
+)
+
+# Oppsummer modellresultatene
+summary_modell_legext <- summary(model_legext)
+
+# Hent ut estimatet og standardfeilen for 'post'
+post_koeff_ext <- summary_modell_legext$tTable["timepost", "Value"]
+post_se_ext <- summary_modell_legext$tTable["timepost", "Std.Error"]
+
+# Beregn konfidensintervallet for post-estimatet
+alpha <- 0.05
+z_value <- qnorm(1 - alpha / 2)
+
+lower_bound_ext <- post_koeff_ext - z_value * post_se_ext
+upper_bound_ext <- post_koeff_ext + z_value * post_se_ext
+
+konfidensintervall_post_ext <- c(lower_bound_ext, upper_bound_ext)
+
+# Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
+interaksjon_koeff_ext <- summary_modell_legext$tTable["timepost:setssingle", "Value"]
+interaksjon_se_ext <- summary_modell_legext$tTable["timepost:setssingle", "Std.Error"]
+
+# Beregn konfidensintervallet for interaksjonsestimatet
+lower_bound_interaksjon_ext <- interaksjon_koeff_ext - z_value * interaksjon_se_ext
+upper_bound_interaksjon_ext <- interaksjon_koeff_ext + z_value * interaksjon_se_ext
+
+konfidensintervall_interaksjon_ext <- c(lower_bound_interaksjon_ext, upper_bound_interaksjon_ext)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'asis'
+
+# Last inn nødvendige pakker
+library(exscidata)
+library(tidyverse)
+library(nlme)
+data("dxadata")
+
+# Filtrer datasettet for muskeltverrsnitt og forbered dataene
+muskeltverr <- dxadata %>%
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(names_to = "leg",
+               values_to = "lean.mass",
+               cols = lean.left_leg:lean.right_leg) %>%
+  mutate(leg = if_else(leg == "lean.left_leg", "L", "R"),
+         sets = if_else(multiple == leg, "multiple", "single"),
+         time = factor(time, levels = c("pre", "post"))) %>%
+  select(participant, time, sex, include, sets, leg, lean.mass)
+
+# Modell for muskeltverrsnitt uten manglende verdier
+model_muskel <- lme(
+  fixed = lean.mass ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = muskeltverr,
+  na.action = na.omit
+)
+
+# Oppsummer modellen
+summary_modell_muskel <- summary(model_muskel)
+
+# Hent ut estimatet og standardfeilen for 'timepost'
+post_koeff_muskel <- summary_modell_muskel$tTable["timepost", "Value"]
+post_se_muskel <- summary_modell_muskel$tTable["timepost", "Std.Error"]
+
+# Beregn konfidensintervallet for post-estimatet
+alpha <- 0.05
+z_value <- qnorm(1 - alpha / 2)
+
+lower_bound_muskel <- post_koeff_muskel - z_value * post_se_muskel
+upper_bound_muskel <- post_koeff_muskel + z_value * post_se_muskel
+
+konfidensintervall_muskel <- c(lower_bound_muskel, upper_bound_muskel)
+
+# Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
+interaksjon_koeff_muskel <- summary_modell_muskel$tTable["timepost:setssingle", "Value"]
+interaksjon_se_muskel <- summary_modell_muskel$tTable["timepost:setssingle", "Std.Error"]
+
+# Beregn konfidensintervallet for interaksjonsestimatet
+lower_bound_interaksjon_muskel <- interaksjon_koeff_muskel - z_value * interaksjon_se_muskel
+upper_bound_interaksjon_muskel <- interaksjon_koeff_muskel + z_value * interaksjon_se_muskel
+
+konfidensintervall_interaksjon_muskel <- c(lower_bound_interaksjon_muskel, upper_bound_interaksjon_muskel)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'asis'
+
+# Last inn nødvendige pakker
+library(exscidata)
+library(tidyverse)
+library(nlme)
+data("strengthvolume")
+
+# Filtrer datasettet for leg press-øvelsen og sett 'time' som en faktor med ønsket rekkefølge
+strengthvolume_legpress <- strengthvolume %>%
+  filter(exercise == "legpress") %>%
+  mutate(time = factor(time, levels = c("pre", "session1", "week2", "week5", "week9", "post")))
+
+# Modell for muskelstyrke i legpress-øvelsen uten manglende verdier
+model_legpress <- lme(
+  fixed = load ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = strengthvolume_legpress,  # Bruker det oppdaterte datasettet
+  na.action = na.omit
+)
+
+# Oppsummer modellresultatene
+summary_modell_legpress <- summary(model_legpress)
+
+# Hent ut estimatet og standardfeilen for 'post'
+post_koeff_press <- summary_modell_legpress$tTable["timepost", "Value"]
+post_se_press <- summary_modell_legpress$tTable["timepost", "Std.Error"]
+
+# Beregn konfidensintervallet for post-estimatet
+alpha <- 0.05
+z_value <- qnorm(1 - alpha / 2)
+
+lower_bound_press <- post_koeff_press - z_value * post_se_press
+upper_bound_press <- post_koeff_press + z_value * post_se_press
+
+konfidensintervall_post_press <- c(lower_bound_press, upper_bound_press)
+
+# Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
+interaksjon_koeff_press <- summary_modell_legpress$tTable["timepost:setssingle", "Value"]
+interaksjon_se_press <- summary_modell_legpress$tTable["timepost:setssingle", "Std.Error"]
+
+# Beregn konfidensintervallet for interaksjonsestimatet
+lower_bound_interaksjon_press <- interaksjon_koeff_press - z_value * interaksjon_se_press
+upper_bound_interaksjon_press <- interaksjon_koeff_press + z_value * interaksjon_se_press
+
+konfidensintervall_interaksjon_press <- c(lower_bound_interaksjon_press, upper_bound_interaksjon_press)
+```
+
+Under i @tbl-modeller, er det en oversikt over de sentrale parametrene for de tre LMM-ene som ble brukt i denne studien.
+
+```{r}
+#| echo: false
+#| label: tbl-modeller
+#| fig-cap: "Oppsummering av Modellene for Pre og Post"
+#| message: false
+#| warning: false
+#| results: 'asis'
+
+# Last inn nødvendige pakker
+library(broom)
+library(broom.mixed)
+library(knitr)
+library(gt)
+
+# Ekstraher oppsummeringer for hver modell
+tidy_legext <- tidy(model_legext)
+tidy_legpress <- tidy(model_legpress)
+tidy_muskel <- tidy(model_muskel)
+
+# Legg til en kolonne som angir modellnavnet for enkel referanse
+tidy_legext$model <- "Model 1.1: Leg Extension"
+tidy_legpress$model <- "Model 1.2: Leg Press"
+tidy_muskel$model <- "Model 2: Muskel Tverrsnitt"
+
+# Kombiner alle dataene i én dataframe
+tidy_models <- rbind(tidy_legext, tidy_legpress, tidy_muskel)
+
+# Hvis nødvendig, tilordne unike termer til en variabel uten å skrive ut
+unique_terms <- unique(tidy_models$term)
+
+# Filtrer ut kun de radene som er relevante
+tidy_models_filtered <- tidy_models %>%
+  filter(term %in% c("(Intercept)", "timepost", "timepost:setssingle"))
+
+# Velg ut de viktigste kolonnene og legg til formatering for p-verdier med stjerner
+tidy_models_summary <- tidy_models_filtered %>%
+  dplyr::select(model, term, estimate, std.error, statistic, p.value) %>%
+  mutate(
+    estimate = round(estimate, 3),
+    std.error = round(std.error, 3),
+    statistic = round(statistic, 3),
+    p.value = ifelse(p.value < 0.05, "0.05*", format.pval(p.value, digits = 3, nsmall = 3))
+  )
+
+# Lag tabellen og skriv den ut
+tidy_models_summary %>%
+  gt() %>%
+  tab_header(
+    title = "Oppsummering av Modellene for Pre og Post",
+    subtitle = "Inkludert Forskjeller Mellom Single og Multiple Sett"
+  ) %>%
+  cols_label(
+    model = "Modell",
+    term = "Parameter",
+    estimate = "Estimert Koeffisient",
+    std.error = "Standard Feil",
+    statistic = "t-verdi",
+    p.value = "p-verdi"
+  ) %>%
+  fmt_number(
+    columns = c("estimate", "std.error", "statistic"),
+    decimals = 3
+  )
+```
+
+## Endring i muskelstyrke
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'asis'
+
+# Last inn nødvendige pakker
+library(exscidata)
+library(tidyverse)
+library(nlme)
+data("dxadata")
+
+# Filtrer datasettet for muskeltverrsnitt og forbered dataene
+muskeltverr <- dxadata %>%
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(names_to = "leg",
+               values_to = "lean.mass",
+               cols = lean.left_leg:lean.right_leg) %>%
+  mutate(leg = if_else(leg == "lean.left_leg", "L", "R"),
+         sets = if_else(multiple == leg, "multiple", "single"),
+         time = factor(time, levels = c("pre", "post"))) %>%
+  select(participant, time, sex, include, sets, leg, lean.mass)
+  # Merk: 'print()' er fjernet for å unngå uønsket output
+
+# Modell for muskeltverrsnitt uten manglende verdier
+model_muskel <- lme(
+  fixed = lean.mass ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = muskeltverr,
+  na.action = na.omit
+)
+
+# Oppsummer modellen
+summary_modell_muskel <- summary(model_muskel)
+
+# Hent ut estimatet og standardfeilen for 'timepost'
+post_koeff_muskel <- summary_modell_muskel$tTable["timepost", "Value"]
+post_se_muskel <- summary_modell_muskel$tTable["timepost", "Std.Error"]
+
+# Beregn konfidensintervallet for post-estimatet
+alpha <- 0.05
+z_value <- qnorm(1 - alpha / 2)
+
+lower_bound_muskel <- post_koeff_muskel - z_value * post_se_muskel
+upper_bound_muskel <- post_koeff_muskel + z_value * post_se_muskel
+
+konfidensintervall_muskel <- c(lower_bound_muskel, upper_bound_muskel)
+
+# Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
+interaksjon_koeff_muskel <- summary_modell_muskel$tTable["timepost:setssingle", "Value"]
+interaksjon_se_muskel <- summary_modell_muskel$tTable["timepost:setssingle", "Std.Error"]
+
+# Beregn konfidensintervallet for interaksjonsestimatet
+lower_bound_interaksjon_muskel <- interaksjon_koeff_muskel - z_value * interaksjon_se_muskel
+upper_bound_interaksjon_muskel <- interaksjon_koeff_muskel + z_value * interaksjon_se_muskel
+
+konfidensintervall_interaksjon_muskel <- c(lower_bound_interaksjon_muskel, upper_bound_interaksjon_muskel)
+```
+
+```{r}
+# Filtrer datasettet for leg press-øvelsen og sett 'time' som en faktor med ønsket rekkefølge
+strengthvolume_legpress <- strengthvolume %>%
+  filter(exercise == "legpress") %>%
+  mutate(time = factor(time, levels = c("pre", "session1", "week2", "week5", "week9", "post")))
+
+# Modell for muskelstyrke i legpress-øvelsen uten manglende verdier
+model_legpress <- lme(
+  fixed = load ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = strengthvolume_legpress,  # Bruker det oppdaterte datasettet
+  na.action = na.omit
+)
+
+# Oppsummer modellresultatene
+summary_modell_legpress <- summary(model_legpress)
+
+# Hent ut estimatet og standardfeilen for 'post'
+post_koeff_press <- summary_modell_legpress$tTable["timepost", "Value"]
+post_se_press <- summary_modell_legpress$tTable["timepost", "Std.Error"]
+
+# Beregn konfidensintervallet for post-estimatet
+alpha <- 0.05
+z_value <- qnorm(1 - alpha / 2)
+
+lower_bound_press <- post_koeff_press - z_value * post_se_press
+upper_bound_press <- post_koeff_press + z_value * post_se_press
+
+konfidensintervall_post_press <- c(lower_bound_press, upper_bound_press)
+
+# Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
+interaksjon_koeff_press <- summary_modell_legpress$tTable["timepost:setssingle", "Value"]
+interaksjon_se_press <- summary_modell_legpress$tTable["timepost:setssingle", "Std.Error"]
+
+# Beregn konfidensintervallet for interaksjonsestimatet
+lower_bound_interaksjon_press <- interaksjon_koeff_press - z_value * interaksjon_se_press
+upper_bound_interaksjon_press <- interaksjon_koeff_press + z_value * interaksjon_se_press
+
+konfidensintervall_interaksjon_press <- c(lower_bound_interaksjon_press, upper_bound_interaksjon_press)
+```
+
+Generelt viser resultatene en økning i muskelstyrke for både leg press og leg extension for alle grupper, og at flere sett gir større økning i muskelstyrke (@tbl-des-styrke).For leg extension var den prosentvise økningen i muskelstyrke større for menn enn for kvinner, uavhengig av om de trente med ett eller flere sett. Kvinner som utførte flere sett økte gjennomsnittlig muskelstyrke med cirka 53 %, mens menn som utførte flere sett økte med omtrent 61 %. Tilsvarende var økningen for ett sett 50 % for kvinner og 49 % for menn.
+
+For leg press var den prosentvise økningen også større for menn enn for kvinner, og forskjellene mellom treningsvolumene var tydeligere. Kvinner som trente med flere sett økte gjennomsnittlig muskelstyrke med omtrent 70 %, mens menn økte med omtrent 48 %. For ett sett var den prosentvise økningen for kvinner cirka 63 %, mens menn økte med omtrent 46 %.
+
+```{r}
+#| echo: false
+#| label: tbl-des-styrke
+#| tbl-cap: "Deskriptiv data for styrke pre og post"
+
+library(exscidata)
+library(tidyverse)
+library(ggplot2)
+library(gt)
+
+data("strengthvolume")
+
+# Filtrer datasettet for leg press-øvelsen 
+strengthvolume_legpress <- strengthvolume %>%
+  filter(exercise == "legpress") 
+
+# Filtrer datasettet for leg extension-øvelsen 
+strengthvolume_legext <- strengthvolume %>%
+  filter(exercise == "legext")
+
+# Filtrer for pre og post, og beregn gjennomsnitt og standardavvik for `legext`
+deskriptiv_legext <- strengthvolume_legext %>%
+  filter(time %in% c("pre", "post")) %>%
+  group_by(time, sets, sex) %>%
+  summarise(
+    mean_load = mean(load, na.rm = TRUE),
+    sd_load = sd(load, na.rm = TRUE),
+    n = n()
+  ) %>%
+  mutate(exercise = "Leg Extension")
+
+# Filtrer for pre og post, og beregn gjennomsnitt og standardavvik for `legpress`
+deskriptiv_legpress <- strengthvolume_legpress %>%
+  filter(time %in% c("pre", "post")) %>%
+  group_by(time, sets, sex) %>%
+  summarise(
+    mean_load = mean(load, na.rm = TRUE),
+    sd_load = sd(load, na.rm = TRUE),
+    n = n()
+  ) %>%
+  mutate(exercise = "Leg Press")
+
+# Kombiner begge tabellene til én
+deskriptiv_samlet <- bind_rows(deskriptiv_legext, deskriptiv_legpress)
+
+# Formater tabellen for å inkludere deskriptiv statistikk for pre og post
+tabell_deskriptiv <- deskriptiv_samlet %>%
+  dplyr::select(exercise, time, sets, sex, mean_load, sd_load) %>%
+  rename(
+    Exercise = exercise,
+    Time = time,
+    Sets = sets,
+    Sex = sex,
+    Mean_Load = mean_load,
+    SD_Load = sd_load
+  )
+
+tabell_deskriptiv %>%
+  gt() %>%
+  cols_label(
+    Exercise = "Exercise",
+    Time = "Time",
+    Sets = "Sets",
+    Sex = "Sex",
+    Mean_Load = "Mean Load (kg)",
+    SD_Load = "Standard Deviation (kg)"
+  ) %>%
+  fmt_number(
+    columns = c(Mean_Load, SD_Load),
+    decimals = 2
+  ) %>%
+  tab_options(
+    table.width = "100%",            # Sett bredden til 100% for å fylle hele siden
+    data_row.padding = 3,            # Bruker 3 direkte for padding
+    table.font.size = "small",       # Reduser skriftstørrelsen for en mer kompakt visning
+    heading.title.font.size = "medium",  # Tilpass overskriftens størrelse
+    column_labels.font.size = "small"    # Gjør kolonneoverskriftene mindre
+  )
+```
+
+Gjennomsnittlig muskelstyrke økte over tid for begge øvelsene (@fig-styrke). Modellresultatene (lme-modellen) viser at økningen fra baseline (pre) til hver påfølgende tid (økt 1, uke 2, uke 5, uke 9 og post) var statistisk signifikant (p \< 0.05). Når det gjelder endringene fra pre til post for de to øvelsene, ble det estimert at legpress økte med `r round(post_koeff_ext, 2)` kg (SE = `r round(post_se_ext, 2)` kg, 95% konfidensintervall (KI): \[`r round(lower_bound_ext, 2)`, `r round(upper_bound_ext, 2)`\]). Mens med leg press, ble det estimert at muskelstyrken økte med `r round(post_koeff_press, 2)` kg (SE `r round(post_se_press, 2)` , 95% konfidensintervall (KI): \[`r round(lower_bound_press, 2)`, `r round(upper_bound_press, 2)`\]).
+
+Når vi ser på om volumforholdene (ett sett vs. flere sett) hadde noen effekt på muskelstyrken, viser konfidensintervallene for leg extension at forskjellen mellom ett sett og flere sett var mellom `r round(lower_bound_ext, 2)` kg og `r round(upper_bound_ext, 2)` kg. Tilsvarende var konfidensintervallet for leg press mellom `r round(lower_bound_press, 2)` kg og `r round(upper_bound_press, 2)` kg. Begge disse konfidensintervallene inkluderer null, noe som indikerer at det ikke var noen statistisk signifikant forskjell mellom ett sett og flere sett for endringen i muskelstyrke, verken for leg extension eller leg press. Dette tyder på at begge treningsvolumene hadde lignende effekt på muskelstyrken.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'asis'
 #| label: fig-styrke
-#| fig-cap: "Utvikling i muskelstyrke for leg press og leg extension"
+#| fig-cap: "Utvikling i muskelstyrke for leg press og leg extension."
 
 # Utregning av gjennomsnitt og SD for muskelstyrke
 
@@ -200,6 +811,71 @@ ggplot(strength, aes(x = time, y = mean_strength, color = sets, shape = sex, gro
   theme_minimal() +
   theme(legend.position = "bottom")
 ```
+
+
+## Endring i muskeltverssnitt
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'asis'
+
+# Last inn dataene
+library(exscidata)
+library(tidyverse)
+library(nlme)
+data("dxadata")
+
+# Filtrer datasettet for muskeltverrsnitt og forbered dataene
+muskeltverr <- dxadata %>%
+  select(participant:include, lean.left_leg, lean.right_leg) %>%
+  pivot_longer(names_to = "leg", 
+               values_to = "lean.mass", 
+               cols = lean.left_leg:lean.right_leg) %>%
+  mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
+         sets = if_else(multiple == leg, "multiple", "single"),
+         time = factor(time, levels = c("pre", "post"))) %>%
+  select(participant, time, sex, include, sets, leg, lean.mass)
+
+# Modell for muskeltverrsnitt uten manglende verdier
+model_muskel <- lme(
+  fixed = lean.mass ~ time * sets + sex,
+  random = ~ 1 | participant,
+  data = muskeltverr,
+  na.action = na.omit
+)
+
+# Oppsummer modellen
+summary_modell_muskel <- summary(model_muskel)
+
+# Hent ut estimatet og standardfeilen for 'timepost'
+post_koeff_muskel <- summary_modell_muskel$tTable["timepost", "Value"]
+post_se_muskel <- summary_modell_muskel$tTable["timepost", "Std.Error"]
+
+# Beregn konfidensintervallet for post-estimatet
+alpha <- 0.05
+z_value <- qnorm(1 - alpha / 2)
+
+lower_bound_muskel <- post_koeff_muskel - z_value * post_se_muskel
+upper_bound_muskel <- post_koeff_muskel + z_value * post_se_muskel
+
+konfidensintervall_muskel <- c(lower_bound_muskel, upper_bound_muskel)
+
+# Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
+interaksjon_koeff_muskel <- summary_modell_muskel$tTable["timepost:setssingle", "Value"]
+interaksjon_se_muskel <- summary_modell_muskel$tTable["timepost:setssingle", "Std.Error"]
+
+# Beregn konfidensintervallet for interaksjonsestimatet
+lower_bound_interaksjon_muskel <- interaksjon_koeff_muskel - z_value * interaksjon_se_muskel
+upper_bound_interaksjon_muskel <- interaksjon_koeff_muskel + z_value * interaksjon_se_muskel
+
+konfidensintervall_interaksjon_muskel <- c(lower_bound_interaksjon_muskel, upper_bound_interaksjon_muskel)
+```
+
+Resultatene viste en signifikant økning i muskelens tverrsnittsareal etter treningsperioden (@tbl-muskeltverr). Den estimerte koeffisienten for post-testen var `r round(post_koeff_muskel, 2)` g (SE = `r round(post_se_muskel, 2)`), med et 95 % konfidensintervall fra `r round(lower_bound_muskel, 2)` til `r round(upper_bound_muskel, 2)`. Dette indikerer at deltakerne i gjennomsnitt økte muskelens tverrsnittsareal med 289,88 gram etter intervensjonen.
+
+Analysen av effekten av treningsvolum på muskelens tverrsnittsareal viste at interaksjonen mellom tid og antall sett ikke var signifikant (estimat = `r round(interaksjon_koeff_muskel, 2)`, SE = `r round(interaksjon_se_muskel, 2)`, 95 % KI \[`r round(lower_bound_interaksjon_muskel, 2)`, `r round(upper_bound_interaksjon_muskel, 2)`\], p = 0,13). Dette indikerer at det ikke var en statistisk signifikant forskjell (p \> 0,05) i økningen av muskelens tverrsnittsareal mellom deltakerne som utførte ett sett og de som utførte tre sett. Selv om estimatet var negativt, tyder det på at økt treningsvolum ikke nødvendigvis førte til en større økning i muskelens tverrsnittsareal i denne studien.
 
 ```{r}
 #| echo: false
@@ -251,5 +927,25 @@ muskeltverr_summary_pre_post %>%
     col.names = c("Tidspunkt", "Treningsvolum", "Gjennomsnittlig muskeltverrsnitt (g)", "Standardavvik (SD)"))
 ```
 
-
 # Diskusjon
+
+Denne studien undersøkte effekten av to ulike treningsvolum, ett sett versus tre sett, på muskelstyrke og muskeltverrsnittsareal. Resultatene viste en signifikant økning i både muskelstyrke og muskeltverrsnittsareal etter treningsperioden for begge gruppene. Imidlertid var det ingen statistisk signifikante forskjeller mellom gruppene som utførte ett sett og de som utførte tre sett, verken for muskelstyrke eller muskelhypertrofi. De diagnostiske analysene bekreftet at modellforutsetningene var rimelig oppfylt, noe som gir tillit til validiteten av funnene våre. Ingen betydelige avvik ble observert i residualene, og modellene ble derfor ansett som passende for dataene.
+
+Disse funnene utfordrer den etablerte oppfatningen om at et høyere treningsvolum alltid fører til større muskeltilpasninger. Tidligere forskning har ofte indikert et dose-respons-forhold mellom treningsvolum og muskelvekst, hvor økt volum er assosiert med større hypertrofi og styrkeøkninger (@schoenfeld2016; @currier2023). For eksempel fant Schoenfeld et al. (2016) at flere sett per øvelse var mer effektive for muskelhypertrofi enn ett sett. På den annen side har noen studier ikke funnet signifikante forskjeller mellom ulike treningsvolum, spesielt når treningsintensiteten er kontrollert (@ralston2017).
+
+En mulig forklaring på våre funn er at begge treningsvolumene var tilstrekkelige for å fremkalle maksimale adaptasjoner innenfor den gitte treningsperioden. Det kan være en terskelverdi for hvor mye volum som er nødvendig for å stimulere muskelvekst og styrke, og at denne terskelen ble nådd med ett sett i vår studie. Dette er også sett i forskning som antyder at selv lave til moderate treningsvolumer kan være effektive for muskelhypertrofi hos utrente individer (@Krieger2010; @Schoenfeld2019).
+
+Når det gjelder muskelstyrke, viste begge gruppene betydelige forbedringer uten signifikante forskjeller mellom volumene. Dette kan skyldes at styrkeøkninger i stor grad påvirkes av nevromuskulære tilpasninger, spesielt i de tidlige stadiene av treningsintervensjoner (@Folland2007). Det er mulig at den relativt korte treningsperioden i vår studie ikke var tilstrekkelig for å avdekke forskjeller i styrkeøkninger basert på treningsvolum.
+
+## Begrensninger
+
+Flere begrensninger bør tas i betraktning. For det første var utvalgsstørrelsen begrenset, noe som kan ha redusert studiens statistiske styrke til å oppdage mindre forskjeller mellom gruppene. Selv om forhåndsberegningen av utvalgsstørrelse indikerte tilstrekkelig kraft, kan individuelle variasjoner ha påvirket resultatene. For det andre var treningsperioden relativt kort, og lengre intervensjoner kan være nødvendig for å observere de fulle effektene av ulikt treningsvolum på muskelhypertrofi og styrke. I tillegg ble ikke faktorer som kosthold, søvn og daglige aktiviteter kontrollert, noe som kan ha påvirket muskeltilpasningene.
+
+## Implikasjoner for fremtidig forskning
+
+Fremtidige studier bør vurdere å inkludere større og mer varierte utvalg, samt lengre treningsperioder, for å bedre forstå effekten av treningsvolum på muskeltilpasninger. Det kan også være verdifullt å undersøke hvordan ulike populasjoner, som erfarne idrettsutøvere versus nybegynnere, responderer på forskjellige treningsvolum. Videre bør fremtidig forskning ta hensyn til andre treningsvariabler som intensitet, frekvens og type øvelser for å gi en mer helhetlig forståelse av optimal treningsdesign.
+
+## Konklusjon
+
+Resultatene fra denne studien indikerer at både ett sett og tre sett med styrketrening fører til signifikante økninger i muskelstyrke og muskeltverrsnittsareal hos voksne individer. Mangelen på signifikante forskjeller mellom de to treningsvolumene antyder at et lavere volum kan være like effektivt som et høyere volum for å fremme muskelstyrke og hypertrofi i en kortere treningsperiode. Disse funnene har praktiske implikasjoner for treningsprogrammering, spesielt for individer med begrenset tid til trening. Likevel er det behov for ytterligere forskning for å bekrefte disse resultatene og for å utforske de langsiktige effektene av treningsvolum på muskeltilpasninger.
+
