@@ -6,14 +6,82 @@ library(nlme)
 library(MASS)
 data("strengthvolume"); data("dxadata")
 
+# Filtrer og fjern eventuelle duplikater i strengthvolume_legext
+strengthvolume_legext_unique <- strengthvolume_legext %>%
+  filter(time %in% c("pre", "post")) %>%
+  distinct(participant, time, .keep_all = TRUE)
+
+# Filtrer og fjern eventuelle duplikater i muskeltverr
+muskeltverr_unique <- muskeltverr %>%
+  filter(time %in% c("pre", "post")) %>%
+  distinct(participant, time, .keep_all = TRUE)
+
+# Kombiner datasettene ved hjelp av inner_join
+combined_data <- strengthvolume_legext_unique %>%
+  inner_join(muskeltverr_unique, by = c("participant", "time"))
+
+# Pivotér dataene slik at pre- og post-verdiene kan beregnes for hver deltaker
+combined_data_wide <- combined_data %>%
+  pivot_wider(
+    names_from = time,
+    values_from = c(load, lean.mass)
+  ) %>%
+  # Beregn differansen mellom 'post' og 'pre' for styrke og muskeltverrsnitt
+  mutate(
+    delta_styrke = load_post - load_pre,
+    delta_muskeltverr = lean.mass_post - lean.mass_pre
+  )
+
+# Kjør en lineær regresjon for å se om endring i muskeltverrsnitt påvirker endring i muskelstyrke
+model_legext_muskeltverr <- lm(delta_styrke ~ delta_muskeltverr, data = combined_data_wide)
+
+# Vis sammendraget av modellen
+summary(model_legext_muskeltverr)
+
+strengthvolume_legext_unique <- strengthvolume_legext %>%
+  filter(time %in% c("pre", "post")) %>%
+  distinct(participant, time, .keep_all = TRUE)
+
+muskeltverr_unique <- muskeltverr %>%
+  filter(time %in% c("pre", "post")) %>%
+  distinct(participant, time, .keep_all = TRUE)
+
+combined_data <- strengthvolume_legext_unique %>%
+  inner_join(muskeltverr_unique, by = c("participant", "time"))
+
+# Kombiner 'strengthvolume_legext' og 'muskeltverr'
+combined_data <- strengthvolume_legext %>%
+  inner_join(muskeltverr, by = c("participant", "time")) %>%
+  filter(time %in% c("pre", "post"))
+
+# Modell for leg extension og muskeltverrsnitt
+model_legext_muskeltverr <- strengthvolume_legext %>%
+  filter(time %in% c("pre", "post")) %>%
+  pivot_wider(names_from = time, values_from = c(load, lean.mass)) %>%
+  mutate(
+    delta_styrke = load_post - load_pre,
+    delta_muskeltverr = lean.mass_post - lean.mass_pre
+  ) %>%
+  lm(delta_styrke ~ delta_muskeltverr, data = .)
+
+summary(model_legext_muskeltverr)
+
 # Kombiner muskeltverrsnitt og muskelstyrke data
 combined_data <- muskeltverr %>%
   filter(time %in% c("pre", "post")) %>%
+  mutate(participant = as.character(participant), time = as.character(time)) %>%
   inner_join(
-    strengthvolume %>% filter(exercise %in% c("legpress", "legext"), time %in% c("pre", "post")),
+    strengthvolume %>% 
+      filter(exercise %in% c("legpress", "legext"), time %in% c("pre", "post"))%>%
+      mutate(participant = as.character(participant), time = as.character(time)),
     by = c("participant", "time")
   )
 
+data <- combined_data %>% 
+  group_by(participant) %>% 
+  summarise(
+    delta_styrke = muskelstyrke
+  )
 # Tilpass modellen for sammenhengen mellom muskelstyrke og muskeltverrsnitt
 model_strength_vs_lean_mass <- lme(
   fixed = load ~ lean.mass * sets + sex + time,
