@@ -1,32 +1,89 @@
-# Last inn dataene
+# Last inn nødvendige pakker
 library(exscidata)
 library(tidyverse)
-library(dplyr)
 library(nlme)
-library(MASS)
-data("strengthvolume"); data("dxadata")
+library(ggplot2)
+library(gridExtra)
+data("dxadata")
 
-# Filtrer datasettet for muskeltverrsnitt og forbered dataene
-library(tidyverse)
-
+# Forbered dataene
 muskeltverr <- dxadata %>%
   select(participant:include, lean.left_leg, lean.right_leg) %>%
-  pivot_longer(names_to = "leg", 
-               values_to = "lean.mass", 
-               cols = lean.left_leg:lean.right_leg) %>%
-  mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
-         sets = if_else(multiple == leg, "multiple", "single")) %>%
+  pivot_longer(
+    names_to = "leg",
+    values_to = "lean.mass",
+    cols = lean.left_leg:lean.right_leg
+  ) %>%
+  mutate(
+    leg = if_else(leg == "lean.left_leg", "L", "R"),
+    sets = if_else(multiple == leg, "multiple", "single"),
+    time = factor(time, levels = c("pre", "post"))
+  ) %>%
   select(participant, time, sex, include, sets, leg, lean.mass)
 
-# Modell for muskeltverrsnitt uten manglende verdier
+# Bygg modellen
 model_muskel <- lme(
-  fixed = load ~ time * sets + sex,
+  fixed = lean.mass ~ time * sets + sex,
   random = ~ 1 | participant,
   data = muskeltverr,
   na.action = na.omit
 )
 
-summary(model_muskel)
+# Undertrykk output av modelloppsummering
+summary_modmuskel <- summary(model_muskel)
+
+# Ekstraher residualer og predikerte verdier
+residuals_muskeltverr <- residuals(model_muskel)
+fitted_values_muskeltverr <- fitted(model_muskel)
+
+# Lag plottene
+# 1. Q-Q plot
+qq_plot_muskeltverr <- ggplot(data = data.frame(sample = residuals_muskeltverr), aes(sample = sample)) +
+  stat_qq() +
+  stat_qq_line(col = "red") +
+  ggtitle("Q-Q Plot") +
+  theme_minimal()
+
+# 2. Residualer vs. Predikerte Verdier
+residuals_plot_muskeltverr <- ggplot(data = data.frame(fitted = fitted_values_muskeltverr, residuals = residuals_muskeltverr),
+                                     aes(x = fitted, y = residuals)) +
+  geom_point() +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  ggtitle("Residualer vs. Predikerte Verdier") +
+  xlab("Predikerte Verdier") +
+  ylab("Residualer") +
+  theme_minimal()
+
+# 3. Histogram av Residualer
+hist_plot_muskeltverr <- ggplot(data = data.frame(residuals = residuals_muskeltverr), aes(x = residuals)) +
+  geom_histogram(bins = 20, fill = "blue", color = "black") +
+  ggtitle("Histogram av Residualer") +
+  xlab("Residualer") +
+  ylab("Frekvens") +
+  theme_minimal()
+
+# 4. Tomt plot eller legg til et fjerde plot hvis ønskelig
+empty_plot <- ggplot() + 
+  theme_void() + 
+  ggtitle("")
+
+# Kombiner plottene
+grid.arrange(qq_plot_muskeltverr, residuals_plot_muskeltverr, hist_plot_muskeltverr, empty_plot, nrow = 2)
+
+
+
+# Plotting
+ggplot(strengthvolume_legext, aes(x = time, y = load, color = sets, shape = sex, group = interaction(sets, sex))) +
+  stat_summary(fun = mean, geom = "line", size = 1) +
+  stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.2) + 
+  labs(
+    title = "Utvikling av Muskelstyrke i Leg Extension", 
+    x = "Tidspunkt", 
+    y = "Muskelstyrke (kg)", 
+    color = "Treningsvolum", 
+    shape = "Kjønn"
+  ) +
+  theme_minimal()
 
 # Utfør Box-Cox for `lean.mass` for å finne optimal lambda
 boxcox_model_lean_mass <- boxcox(lm(lean.mass ~ time * sets + sex, data = muskeltverr))
