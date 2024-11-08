@@ -32,7 +32,6 @@ lower_bound_ext <- post_koeff_ext - z_value * post_se_ext
 upper_bound_ext <- post_koeff_ext + z_value * post_se_ext
 
 konfidensintervall_post_ext <- c(lower_bound_ext, upper_bound_ext)
-print(konfidensintervall_post_ext)
 
 # Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
 interaksjon_koeff_ext <- summary_modell_legext$tTable["timepost:setssingle", "Value"]
@@ -43,8 +42,14 @@ lower_bound_interaksjon_ext <- interaksjon_koeff_ext - z_value * interaksjon_se_
 upper_bound_interaksjon_ext <- interaksjon_koeff_ext + z_value * interaksjon_se_ext
 
 konfidensintervall_interaksjon_ext <- c(lower_bound_interaksjon_ext, upper_bound_interaksjon_ext)
-print(konfidensintervall_interaksjon_ext)
 
+
+
+# Last inn dataene
+library(exscidata)
+library(tidyverse)
+library(nlme)
+data("dxadata")
 
 # Filtrer datasettet for leg press-øvelsen og sett 'time' som en faktor med ønsket rekkefølge
 strengthvolume_legpress <- strengthvolume %>%
@@ -74,7 +79,6 @@ lower_bound_press <- post_koeff_press - z_value * post_se_press
 upper_bound_press <- post_koeff_press + z_value * post_se_press
 
 konfidensintervall_post_press <- c(lower_bound_press, upper_bound_press)
-print(konfidensintervall_post_press)
 
 # Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
 interaksjon_koeff_press <- summary_modell_legpress$tTable["timepost:setssingle", "Value"]
@@ -85,7 +89,6 @@ lower_bound_interaksjon_press <- interaksjon_koeff_press - z_value * interaksjon
 upper_bound_interaksjon_press <- interaksjon_koeff_press + z_value * interaksjon_se_press
 
 konfidensintervall_interaksjon_press <- c(lower_bound_interaksjon_press, upper_bound_interaksjon_press)
-print(konfidensintervall_interaksjon_press)
 
 # Last inn dataene
 library(exscidata)
@@ -102,8 +105,7 @@ muskeltverr <- dxadata %>%
   mutate(leg = if_else(leg == "lean.left_leg", "L", "R"), 
          sets = if_else(multiple == leg, "multiple", "single"),
          time = factor(time, levels = c("pre", "post"))) %>%
-  select(participant, time, sex, include, sets, leg, lean.mass) %>%
-  print()
+  select(participant, time, sex, include, sets, leg, lean.mass)
 
 # Modell for muskeltverrsnitt uten manglende verdier
 model_muskel <- lme(
@@ -128,7 +130,6 @@ lower_bound_muskel <- post_koeff_muskel - z_value * post_se_muskel
 upper_bound_muskel <- post_koeff_muskel + z_value * post_se_muskel
 
 konfidensintervall_muskel <- c(lower_bound_muskel, upper_bound_muskel)
-print(konfidensintervall_muskel)
 
 # Hent ut estimatet og standardfeilen for interaksjonen mellom 'timepost' og 'setssingle'
 interaksjon_koeff_muskel <- summary_modell_muskel$tTable["timepost:setssingle", "Value"]
@@ -139,4 +140,3 @@ lower_bound_interaksjon_muskel <- interaksjon_koeff_muskel - z_value * interaksj
 upper_bound_interaksjon_muskel <- interaksjon_koeff_muskel + z_value * interaksjon_se_muskel
 
 konfidensintervall_interaksjon_muskel <- c(lower_bound_interaksjon_muskel, upper_bound_interaksjon_muskel)
-print(konfidensintervall_interaksjon_muskel)

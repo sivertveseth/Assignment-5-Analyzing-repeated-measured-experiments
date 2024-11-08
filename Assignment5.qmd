@@ -639,6 +639,12 @@ konfidensintervall_interaksjon_muskel <- c(lower_bound_interaksjon_muskel, upper
 ```
 
 ```{r}
+# Last inn dataene
+library(exscidata)
+library(tidyverse)
+library(nlme)
+data("dxadata")
+
 # Filtrer datasettet for leg press-øvelsen og sett 'time' som en faktor med ønsket rekkefølge
 strengthvolume_legpress <- strengthvolume %>%
   filter(exercise == "legpress") %>%
